@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to VitaliZenLife</title>
+</head>
+<script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        border:2px solid violet;
+        box-shadow: inset;
+        height:auto;
+        width:60%;
+        border-radius:5px;
+        position:relative;
+        top:150px;
+        left:20%;
+    }
+    .first,.second{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        gap:14px;
+        font-size:1.7rem;
+        position:relative;
+        top:10px;
+    }
+    .first input[type="email"]{
+        padding:1.25rem;
+        height:1.5rem;
+        border-radius:5px;
+        border:2px solid violet;
+    }
+    .first input[type="password"]{
+        padding:1.25rem;
+        height:1.5rem;
+        border-radius:5px;
+        border:2px solid violet;
+    }
+    .first a{
+        text-decoration:none;
+        font-size:1.3rem;
+        color:violet;
+    }
+    .first button{
+        width:40%;
+        padding:0.8rem;
+        border-radius:10px;
+        background-color:rgb(215, 72, 215);
+        border:2px solid white;
+        color:white;
+        font-size:1.3rem;
+        font-weight:bolder;
+    }
+    .first button:hover{
+        cursor:pointer;
+        font-weight:bolder;
+    }
+    .google,.facebook{
+        display:flex;
+        justify-content: space-between;
+        border:2px solid violet;
+        padding:10px;
+        border-radius:5px;
+        width:100%;
+        font-size:1.3rem;
+    }
+    .google:hover{
+        background-color:violet;
+        color:white;
+        font-weight:bolder;
+        cursor:pointer;
+    }
+    .facebook:hover{
+        background-color:violet;
+        color:white;
+        font-weight:bolder;
+        cursor:pointer;
+    }
+    #googleicon{
+        margin:10px 0px 10px 10px;
+    }
+    .third{
+        font-size:1.2rem;
+    }
+    .third a{
+        text-decoration:none;
+        color:#e00efb;
+    }
+    @media (min-width:280px) and (max-width:359px){
+        .container{
+            width:auto;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            gap:8px;
+        }
+        .email,.password{
+            font-size:1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+        }
+        .email input[type="email"]{
+            position:relative;
+            top:-20px;
+            width:90%;
+        }
+        .password input[type="password"]{
+            position:relative;
+            top:-20px;
+            width:90%;
+        }
+        .password label{
+            position: relative;
+            top:-20px;
+        }
+        .second{
+            font-size:0.4rem;
+        }
+        .google,.facebook{
+            width:90%;
+        }
+    }
+    @media (min-width:360px) and (max-width:740px){
+        .container{
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            gap:8px;
+        }
+        .email,.password{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+        }
+        .email input[type="email"]{
+            position:relative;
+            top:-20px;
+        }
+        .password label{
+            position: relative;
+            top:-10px;
+        }
+    }
+    @media (min-width:768px) and (max-width:1180px){
+        .container{
+            width:70%;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            gap:8px;
+        }
+    }
+</style>
+<body>
+    <fieldset style="border:2px solid white;">
+    <div class="container">
+        <br>
+        <legend><i class="fa-solid fa-user fa-flip fa-2xl" style="color: #1a191a;font-size: 2.4rem;"></i></legend>
+        <br>
+        <div class="first">
+            <div class="email">&nbsp &nbsp
+            <label style="font-weight:lighter;">E-mail: </label>&nbsp
+            <input type="email" placeholder="Enter Your E-mail" size="30">
+            </div>
+            <div class="password">
+                <label>Password : </label>
+                <input type="password" placeholder="Enter Your Password" size="30">
+            </div>
+            <a href="">Forget password?</a>
+            <button>Submit</button>
+        </div><br>
+        <p>OR</p><br>
+        <div class="second">
+            <div class="google"><i class="fa-brands fa-google fa-xl" id="googleicon" style="color: #e00efb;"></i>&nbsp Continue with Google</div>
+            <div class="facebook"><i class="fa-brands fa-facebook-f fa-xl" style="color: #f604ee;" id="googleicon"></i>&nbsp &nbspContinue with Facebook</div>
+        </div><br><br>
+        <div class="third">
+            <p>New to VitaliZenLife? <a href="./signup.html"> Create account</a></p>
+        </div>
+        <br>
+    </div>
+</fieldset>
+</body>
+</html>
