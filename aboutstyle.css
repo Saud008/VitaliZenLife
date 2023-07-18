@@ -292,6 +292,9 @@ a{
     .first .left{
         width:100%;
     }
+    #firstbtn{
+        display:none;
+    }
     .first .left h1{
         padding:5px;
         font-size:2.3rem;
