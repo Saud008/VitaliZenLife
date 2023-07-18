@@ -84,7 +84,7 @@ nav .menu-btn i{
         width:100%;
         text-align:center;
         transition: all .3s ease;
-        z-index:100;
+        z-index:500;
     }
     nav ul li{
         margin-top:40px;
