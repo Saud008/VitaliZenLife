@@ -75,6 +75,9 @@ nav .menu-btn i{
     display: none;
 }
 @media (max-width:940px){
+    nav{
+        z-index:100;
+    }
     nav ul{
         position:fixed;
         left:-100%;
