@@ -11,7 +11,7 @@ body{
     box-sizing: border-box;
 }
 nav{
-    height:80px;
+    height:100px;
     background-color:#cbd5e1;
     display:flex;
     color:black;
