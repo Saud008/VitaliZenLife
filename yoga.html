@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cssfiles/services.css">
+    <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+    
+    <style>
+
+        *{
+          scroll-behavior: smooth;
+        }
+        .menu{
+          
+          cursor: pointer;
+        }
+        
+        .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #333;
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+        
+        .change .bar1 {
+          transform: translate(0, 11px) rotate(-45deg);
+        }
+        
+        .change .bar2 {opacity: 0;}
+        
+        .change .bar3 {
+          transform: translate(0, -11px) rotate(45deg);
+        }
+
+        /* .hero{
+          position: relative;
+          overflow: hidden;
+        }
+        .content{
+          position: absolute;
+          transform: translateX(100%);
+          
+        }
+        #content1{
+          transform: translateX(0px);
+        } */
+
+        .cureBlocks{
+          background-color: rgb(255, 225, 241);
+          border: 1px solid black;
+          border-radius: 12px;
+          padding: 10px;
+          margin: 10px auto;
+      }
+    .collapsible {
+        border-radius: 12px;
+        background-color: rgb(255, 225, 241);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: rgb(251, 202, 227);
+    }
+
+    .content {
+      padding: 0 18px;
+      
+      display: none;
+      overflow: hidden;
+      background-color: rgb(255, 225, 241);
+      
+    }
+    .content li{
+        border:0;
+        padding: 10px;
+        margin:10px;
+        
+        border-radius: 12px;
+        
+        background-color: rgb(251, 202, 227);
+        list-style-type: none;
+      }
+         /* Search  */
+         #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 12px;
+          background-repeat: no-repeat;
+          margin: 20px auto;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #7e7e7e;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+        }
+        
+        .slide{
+          opacity:0;
+          filter: blur(5px);
+          font-size: 10px;
+          
+          transition: all 1s;
+        }
+        .show{
+          opacity:1;
+          filter:blur(0);
+          transform:translateX(0);
+          font-size: 100px;
+        }
+        
+        </style>
+</head>
+<body >
+
+<!-- Navigation bar starts here -->
+
+    <nav class="bg-slate-300 w-full h-20 flex justify-between items-center fixed z-50 ">
+        <div><i class="fa-solid fa-notes-medical fa-2xl text-4xl mx-2" style="color: #e20bfe;"></i><span class="text-2xl mx-2">VitaliZenLife</span></div>
+        <div class="hidden md:block">
+            <a class="mx-5" href="#home">Home</a>
+            <a class="mx-5" href="#about">About</a>
+            <a class="mx-5" href="#services">Services</a>
+            <a class="mx-5" href="#Blogs">Blogs</a>
+            <a class="mx-5" href="#WellnessResources">Wellness Resources</a>
+        </div>
+        <div class="hidden md:block">
+            <a class="mx-3 " href="./login.html">Login / SignUp</a>
+            
+        </div>
+        <div class="block md:hidden mr-5 menu" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+    </nav>
+    <div  class="lists w-[300px]  fixed right-10 top-28 hidden md:hidden z-50">
+      <ul class="text-white text-2xl flex flex-col items-center" style="background-color: rgba(0, 0, 0, 0.737); backdrop-filter: blur(10px); border: 2px solid white;padding: 10px 0;border-radius: 15px;">
+        <li class="mx-5 mb-5"><a href="#home">Home</a></li>
+        <li class="mx-5 mb-5"><a href="#about">About</a></li>
+        <li class="mx-5 mb-5"><a href="#services">Services</a></li>
+        <li class="mx-5 mb-5"><a href="#Blogs">Blogs</a></li>
+        <li class="mx-5 mb-5"><a href="#WellnessResources">Wellness Resources</a></li>
+      </ul>
+    </div>
+<!-- Navigation bar Ends here -->
+<!-- class="border-white block w-[300px] absolute right-10 top-28 md:hidden" -->
+
+
+
+<!-- Hero Section Starts here -->
+    <div class="hero">
+    <div style="background-image: linear-gradient(rgba(0,0,0,0.5), rgb(0, 0, 0)),url('./assests/yog1.jpg');" class=" flex items-center justify-center h-screen bg-fixed bg-no-repeat bg-cover bg-left">
+      <h1 class=" slide text-9xl text-white " id="yoga">Yoga</h1>
+    </div>
+
+    <!-- Subnav -->
+   <div class="flex flex-row text-xl sticky top-20 w-full" style="z-index:1000;"> 
+     <button class="p-2 md:p-5  bg-yellow-500 hover:bg-yellow-600"><a href="#about">About</a></button>
+     <button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600"><a href="#cure">Cures</a></button>
+     <button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600"><a href="#routine">Routines</a></button>
+     <button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600"><a href="#class">Classes</a></button>
+   </div>
+
+   <!-- About yoga section -->
+   <div id="about" class="w-[70%] h-28 m-auto flex justify-center items-center">
+    <div class="h-1 w-full bg-slate-600"></div>
+  </div>
+   <div style="width: 80vw;margin: auto;" id="content1" class="font-normal">
+    <h1 class="text-center text-6xl font-bold mt-5 mb-10" >About Yoga</h1>
+      <p class="text-lg text-slate-800">
+      
+          Welcome to our <b>Yoga Section!</b> We believe in the power of yoga to improve your health and well-being. Yoga is an Ancient practice originated in India that combines physical postures(Asanas), breathing techniques(Pranayama), and meditation to create balance in your body and mind.
+        
+        <br><br>
+          We understand that access to quality yoga education can sometimes be limited. Therefore, we are committed to offering<b> free education </b>on our website, providing valuable information on how yoga can be utilized to manage various diseases and conditions in our <span class="text-xl font-bold"><u><a href="#cure">Cure Disesases Section</a></u></span>. Our comprehensive guides and articles cover topics such as yoga for stress relief, yoga for back pain, yoga for anxiety and depression, and much more. Our aim is to empower individuals with the knowledge to incorporate yoga into their lives and experience its positive effects.
+        <br><br>
+        In addition to our free educational resources, we also conduct <a href="#class"><span class="text-lg font-bold"><u>Yoga Classes</u></a></span> at a <i>affordable cost</i>. Our experienced and certified instructors guide participants through different levels of yoga practice, catering to both beginners and advanced practitioners. These classes are designed to provide a supportive environment where individuals can learn and grow in their yoga journey.
+
+        <br><br>
+
+        Join us on this incredible journey of self-discovery, healing, and growth through yoga. Let us be your guide as you embark on a path towards improved health and well-being. Together, we can unlock the potential within you and empower you to live a healthier, more fulfilling life through the practice of yoga.
+      </p>
+   </div>
+   
+   
+
+<!-- accordion Cure disesess -->
+<div id="cure" class="w-[70%] h-28 m-auto flex justify-center items-center">
+  <div class="h-1 w-full bg-slate-600"></div>
+</div>
+
+ <h1 class="text-center md:text-6xl text-4xl font-bold my-10">Cure Diseases through YOGA</h1>
+ <div>
+  <input type="text" class="w-[90%] md:w-[60%]" id="myInput" onkeyup="searchfunc()" placeholder="Search for diseases..." title="Type in a name">
+  <div class="cureBlocks w-[90%] md:w-[60%]">
+      <button type="button" class="collapsible">Diabetes</button>
+      <div class="content">
+          <p >
+              Asanas:
+              <ul>
+              <li>Supta Matsyendrasana</li>
+              <li>Dhanurasana</li>
+              <li>Paschimottanasana</li>
+              <li>Ardhya Matsyendrasana</li>
+              </ul>
+              
+          </p>
+          <p>
+              Pranayama:
+              <ul>
+              <li>KapalBhati</li>
+              <li>Bhramari</li>
+              <li>Bhastrika</li>
+              </ul>
+          </p>
+      </div>
+  </div>
+
+  <div class="cureBlocks w-[90%] md:w-[60%]">
+  <button type="button" class="collapsible">Obesity</button>
+  <div class="content">
+      <p>
+          Asanas:
+          <ul>
+          <li>Paschimottanasana</li>
+          <li>Dandasana</li>
+          <li>Paschimottanasana</li>
+          <li>Naukasana</li>
+          <li>Halasana</li>
+          </ul>
+          
+      </p>
+      <p>
+          Pranayama:
+          <ul>
+          <li>KapalBhati</li>
+          <li>Bhastrika</li>
+          </ul>
+      </p>
+  </div>
+  </div>
+
+  <div class="cureBlocks w-[90%] md:w-[60%]">
+      <button type="button" class="collapsible">High Blood Pressure</button>
+      <div class="content">
+          <p>
+              Asanas:
+              <ul>
+              <li>Ardha Matsyendrasana</li>
+              <li>Badhakonasana</li>
+              <li>Janusirsasana</li>
+              <li>Virasana</li>
+              <li>Setu Bandhasana</li>
+              </ul>
+              
+          </p>
+          <p>
+              Pranayama:
+              <ul>
+              <li>Anulom Vilom</li>
+              <li>Bhramari</li>
+              <li>KapalBhati</li>
+              </ul>
+          </p>
+      </div>
+  </div>
+
+  <div class="cureBlocks w-[90%] md:w-[60%]">
+      <button type="button" class="collapsible">Back Pain</button>
+      <div class="content">
+          <p>
+              Asanas:
+              <ul>
+              <li>Marjaryasana (Cat-Cow Pose)</li>
+              <li>Adho Mukha Svanasana</li>
+              <li>Balasana (Child’s Pose)</li>
+              <li>Uttanasana</li>
+              <li>Supta Matsyendrasana</li>
+              </ul>
+              
+          </p>
+          <p>
+              Pranayama:
+              <ul>
+              <li>Ujjayi Pranayama</li>
+              <li>Dirga Pranayama</li>
+              </ul>
+          </p>
+      </div>
+  </div>
+
+  <div class="cureBlocks w-[90%] md:w-[60%]">
+      <button type="button" class="collapsible">Asthma</button>
+      <div class="content">
+          <p>
+              Asanas:
+              <ul>
+              <li>Ardha Matsyendrasana</li>
+              <li>Bhujangasana</li>
+              <li>Setu Bandhasana</li>
+              <li>Poorvottanasana</li>
+              <li>Badhakonasana (Butterfly Pose)</li>
+              </ul>
+              
+          </p>
+          <p>
+              Pranayama:
+              <ul>
+              <li>KapalBhati</li>
+              <li>Anulom Vilom</li>
+              </ul>
+          </p>
+      </div>
+  </div>
+</div>
+
+<!-- Daily routine section -->
+<div id="routine" class="w-[70%] h-28 m-auto flex justify-center items-center">
+  <div class="h-1 w-full bg-slate-600"></div>
+</div>
+<div class="flex justify-center items-center flex-col">
+  <h1 class="text-center md:text-6xl text-4xl font-bold my-10">Your Daily Routine</h1>
+  <video src="./assests/routines.mp4" controls class="w-[90vw] md:w-[70vw]"> </video>
+</div>
+
+<!-- Online classes -->
+<div id="class" class=" w-[70%] h-28 m-auto flex justify-center items-center" >
+  <div class="h-1 w-full bg-slate-600"></div>
+</div>
+  <h1 class="text-center text-6xl font-bold my-10">ONLINE CLASSES</h1>
+
+   <div  class=" cards flex flex-row justify-center flex-wrap " style="z-index:0;position: static;">
+    <div class="card sh-96 bg-slate-50  m-5 w-[350px]  rounded-xl overflow-hidden shadow-[0px_5px_5px_0_rgb(56,56,56,0.5)] ease-in duration-200 hover:shadow-[12px_10px_10px_0_rgb(56,56,56,0.45)]">
+      <img src="./assests/card1.png" alt="" class="w-[360px] ">
+      <h2 class="text-3xl font-bold text-center m-3">Basic Yoga</h2>
+      <h4 class="text-xl font-medium m-2 text-slate-700">Morning Batch</h4>
+      <h5 class="text-base font-normal m-2 text-slate-500">5:30-6:30 AM</h5>
+    </div>
+
+    <div class="card h-96 bg-slate-50 m-5 w-[350px]  rounded-xl overflow-hidden shadow-[0px_5px_5px_0_rgb(56,56,56,0.5)] ease-in duration-200 hover:shadow-[12px_10px_10px_0_rgb(56,56,56,0.45)]">
+      <img src="./assests/card2.jpg" alt="" class="w-[350px]">
+      <h2 class="text-3xl font-bold text-center m-3">Advnaced Yoga</h2>
+      <h4 class="text-xl font-medium m-2 text-slate-700">Evening Batch</h4>
+      <h5 class="text-base font-normal m-2 text-slate-500">4:30-5:30 PM</h5>
+    </div>
+
+    <div class="card h-96 bg-slate-50 m-5 w-[350px] rounded-xl overflow-hidden shadow-[0px_5px_5px_0_rgb(56,56,56,0.5)] ease-in duration-200 hover:shadow-[12px_10px_10px_0_rgb(56,56,56,0.45)]">
+      <img src="./assests/card3.jpg" alt="" class="w-[350px]">
+      <h2 class="text-3xl font-bold text-center m-3">Basic Yoga</h2>
+      <h4 class="text-xl font-medium m-2 text-slate-700">Evening Batch</h4>
+      <h5 class="text-base font-normal m-2 text-slate-500">5:30-6:30 PM</h5>
+    </div>
+   </div>
+
+  </div>
+   
+<!-- Hero Section Ends here -->
+
+
+    <!-- Script goes here -->
+    <script>
+        const lists=document.querySelector('.lists')
+        function myFunction(x) {
+          lists.classList.toggle("hidden");
+          x.classList.toggle("change");
+        }
+
+
+
+        function searchfunc() {
+        var input, filter,block,name, a, i, txtValue, hid;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        block = document.getElementsByClassName("cureBlocks")
+        name = document.getElementsByClassName("collapsible")
+        
+        for (i = 0; i < block.length; i++) {
+            a = name[i].innerHTML;
+            console.log(a.toUpperCase())
+            
+            if (a.toUpperCase().indexOf(filter) > -1) {
+                block[i].style.display = "";
+                
+                
+
+            } else {
+                block[i].style.display = "none";
+            }
+        }
+      }
+
+
+
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+            content.style.height = "0";
+            
+          } else {
+            content.style.display = "block";
+            content.style.height = "fit-content";
+          }
+        });
+      }
+
+
+      
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry) => {
+          console.log(entry)
+          if(entry.isIntersecting){
+            entry.target.classList.add('show')
+          }
+          else{
+            entry.target.classList.remove('show')
+          }
+        })
+      })
+
+      const hiddenElements = document.querySelectorAll('.slide');
+      hiddenElements.forEach((el) => observer.observe(el));
+        </script>
+</body>
+</html>
