@@ -53,91 +53,92 @@
         <h1>Train the Fighter in Yourself.</h1><br>
         <p>Don't tell people your plans, show them your results because there is no secret formula to become a fit person.</p><br><br>
         <button id="btn">Try a free class</button>
-    </div><br><br>
-    <div class="workouts">
-        <div class="card">
-            <div class="image">
-                <img src="./backphoto.webp" alt="">
-            </div>
-            <div class="title">
-                <h2>ABCD</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
+    </div>
+    <div class="workout">
+        <br><br>
+        <h1>Workouts that You should do...</h1><br><br>
+        <div class="card1">
+        <div class="cards">
+            <img src="./pushup.avif" alt="">
+            <h2>PushUps</h2>
+            <p>It helps to increase the muscle power of a person.</p>
             <button>Read more</button>
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="./backphoto.webp" alt="">
-            </div>
-            <div class="title">
-                <h2>ABCD</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
+        <div class="cards">
+            <img src="./pullup2.avif" alt="">
+            <h2>PullUps</h2>
+            <p>It helps to increase the height of a person.</p>
             <button>Read more</button>
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="./backphoto.webp" alt="">
-            </div>
-            <div class="title">
-                <h2>ABCD</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
+    </div>
+    <div class="card1">
+        <div class="cards">
+            <img src="./powerlift.avif" alt="">
+            <h2>Power Lifting</h2>
+            <p>It helps to strengthen the spine of a person.</p>
             <button>Read more</button>
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="./backphoto.webp" alt="">
-            </div>
-            <div class="title">
-                <h2>ABCD</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
+        <div class="cards">
+            <img src="./treadmill.webp" alt="">
+            <h2>Treadmill</h2>
+            <p>It increases the stamina of a person.</p>
             <button>Read more</button>
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="./backphoto.webp" alt="">
+    </div>
+    </div><br>
+    <div class="fifth">
+        <div class="section1">
+            <p>Powered by</p><br>
+            <div class="circle">
+                <i class="fa-solid fa-circle-radiation fa-2xl" style="color: #9708f7;"></i>&nbsp
+                <h3>VitaliZen <span style="font-weight:lighter;">Circle</span></h3>
+            </div><br><br>
+            <p>Experience the transformative journey with VitaliZenLife, where we collaborate to provide you an engaging
+                and rewarding wellness experience.</p><br><br>
+                <p>Follow us on: </p><br>
+            <div class="fifthicons">
+                <div class="contacticons"><a><i class="fa-brands fa-facebook fa-2xl" style="color: #0870f7;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-twitter fa-2xl" style="color: #0daaf2;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-linkedin fa-2xl" style="color: #066ff9;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-instagram fa-2xl" style="color: #e90cd6;"></i></a>
+                </div>
             </div>
-            <div class="title">
-                <h2>ABCD</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="section2" >
+            <h2>Resource Center</h2><br>
+            <a href="">Product Updates</a><br>
+            <a href="">Blog</a><br>
+            <a href="">Guides</a><br>
+            <a href="">Client success stories</a><br>
+            <a href="">FAQ's</a><br>
+            <a href="">Podcasts</a><br>
+        </div>
+        <div class="section3">
+            <h2>Company</h2><br>
+            <a href="">About us</a><br>
+            <a href="">Partners</a><br>
+            <a href="">Career</a><br>
+            <a href="">Contact Us</a><br>
+            <a href="">News</a><br>
+            <a href="">Integration</a><br>
+            <a href="">Download app</a><br>
+            <a href="">Become a Contributor</a><br>
+        </div>
+        <div class="section4">
+            <div class="play1">
+                <img src="./isoimage.png" alt="">
+            </div><br><br>
+            <div class="play2">
+                <p>Download the app</p><br>
+                <div class="btns">
+                    <button id="playstore"><i class="fa-brands fa-google-play fa-xl" style="color: #f4f6fb;"></i>&nbsp Get it on Google Play Store</button>
+                    <button id="playstore"><i class="fa-brands fa-apple fa-2xl" style="color: #fafcff;"></i>&nbsp Get it on Apple Play Store</button>
+                </div>
             </div>
-            <button>Read more</button>
         </div>
-        </div>
-    </div><br><br>
-    <div class="nav">
-        <button onclick="goPrev()">
-            Prev
-        </button>
-        <button onclick="goNext()">
-            Next
-        </button>
-    <script>
-        const slides = document.querySelectorAll('.card');
-console.log(slides);
-var ctr = 0;
-slides.forEach(
-    (card,index)=>{
-        card.style.left = `${index*100}%`;
-    }
-)
-const slideimage = ()=>{
-    slides.forEach(
-        (card)=>{
-            card.style.transform = `translateX(-${ctr*100}%)`;
-        }
-    )
-}
-const goPrev = ()=>{
-    ctr--;
-    slideimage();
-}
-const goNext = ()=>{
-    ctr++;
-    slideimage();
-}
-    </script>
+    </div>
 </body>
 </html>

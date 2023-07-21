@@ -5,131 +5,463 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VitaliZenLife - A Health and Wellness Website</title>
     <link rel="stylesheet" href="./homestyle.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .menu{
+          
+          cursor: pointer;
+        }
+        
+        .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #e20bfe;;
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+
+        body {
+        font-family: 'Lato', sans-serif;
+        }
+
+        .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        }
+
+        .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        }
+
+        .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #e20bfe;;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .overlay a {font-size: 20px}
+        .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+        }
+    }
+
+        .hidden-heading {
+            visibility: hidden;
+        }
+    .nav-transparent{
+        background-color: transparent;
+    }
+    .nav-colored{
+        background-color: slategray;
+    }
+
+    /* footer */
+
+    .fifth{
+        background-color:aliceblue;
+        height:60vh;
+        width:100%;
+    }   
+    .fifth{
+        display:flex;
+        height:auto;
+        width:100%;
+        padding:30px;
+        color:white;
+        background-color: #483a64;
+        gap:125px;
+    }
+    .section1{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        width:35%;
+        margin-top:-5%;
+    }
+    .circle,.fifthicons{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: row;
+        gap:12px;
+    }
+    .fifthicons:hover{
+        cursor:pointer;
+    }
+    .section2,.section3{
+        width:21%;
+    }
+    .section2 a , .section3 a{
+        display:block;
+        margin-top: 16px;
+        text-indent: -1em;
+        padding-left: 1em;
+    }
+    .section2 a:hover,.section3 a:hover{
+        text-decoration: underline;
+    }
+    .section4{
+        width:25%;
+        
+    }
+    #playstore{
+        padding:18px 20px;
+        background-color: #f15162;
+        color:white;
+        font-weight:bolder;
+        border-radius: 5px;
+        
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        width:200px;
+    }
+    #playstore:hover{
+        cursor:pointer;
+    }
+
+    @media (min-width:360px) and (max-width:768px){
+    .fifth{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:100%;
+    }
+    .fifth .section1{
+        margin-top:10%;
+        width:70%;
+    }
+    .fifth .section2,.fifth .section3{
+        width:80%;
+        margin-top:-10%;
+    }
+    .fifth .section4{
+        width:100%;
+        margin-top:-10%;
+        margin-right:10%;
+    }
+    .section4 .btns{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+    }
+    .section4 .btns #playstore{
+        max-width: fit-content;
+        width:80%;
+        margin-top: 16px;
+        padding:-10px;
+    }
+    .play2 p{
+        text-align: center;
+    }
+}
+    </style>
 </head>
-<body>
-    <br>
-    <div class="container">
-        <!-- Navigation bar -->
-        <nav>
-            <div class="logo"> <i class="fa-solid fa-notes-medical fa-2xl" style="color: #e20bfe;"></i></i>
-             <p>VitaliZenLife</p>
+<body >
+<!-- Navigation bar -->
+    
+    <nav id="mynav" class=" w-full h-20 flex justify-between items-center fixed z-50 text-white ease-in duration-200">
+        <div><i class="fa-solid fa-notes-medical fa-2xl text-4xl ml-7 mr-3" style="color: #e20bfe;"></i><span class="text-3xl mx-2">VitaliZenLife</span></div>
+        <div class="hidden lg:block text-lg">
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./index.html">Home</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="about.html">About</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="services.html">Services</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="wellnessresources.html">Wellness Resources</a>
+        </div>
+        <div>
+            <a class="mx-3 " href="./login.html">
+                <div class="hidden lg:block p-4 bg-slate-100 text-black rounded mx-5 hover:bg-slate-800 hover:border-2 hover:border-white hover:text-white ease-in duration-300">
+                Login / SignUp
+                </div>
+            </a>
+                
+        </div>
+        
+        
+        <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+    </nav>
+    <div id="myNav" class="overlay" style="z-index: 1000;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+        <div class="overlay-content">
+          <a href="#home">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./wellnessresources.html">Wellness resources</a>
+          <a href="./login.html">
+            <div class=" border-2 border-[#e20bfe] hover:border-white rounded-xl w-fit m-auto text-center p-3 ">Login / SignUp</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- hero section -->
+      <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.586),rgba(64, 13, 74, 0.498)),url('./Assets/Medical-Wallpapers-HD-Free-download.jpg');" class="flex items-center justify-center w-full h-screen bg-no-repeat bg-cover bg-center bg-fixed">
+        <h1 class="text-6xl text-white text-center md:text-8xl  leading-loose md:leading-relaxed" id="heading">Welcome to VitaliZenLife</h1>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center bg-orange-50">
+        <div class=" w-[80vw] md:w-[40vw] px-10 md:px-16 py-20 md:py-40">
+            <h2 class="text-4xl md:text-5xl text-center md:leading-relaxed leading-normal">Create healthy habits, not restrictions</h2>
+        </div>
+        <div class="w-[80vw] md:[w-60vw] px-6 md:px-16 pb-10 md:py-40">
+            <p class="text-xl md:text-3xl  font-sans font-normal md:leading-normal ">
+                Take care of your body. It's the only place you have to live. Let's build Wellness rather than treat disease. Healthy is an outfit that looks different on everybody.
+            </p>
+        </div>
+      </div>
+
+      
+      <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-[700px] ease-in duration-200 my-10">
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-full md:w-48" src="./assests/jogging.jpg" alt="Modern building architecture">
+          </div>
+          <div class="p-8">
+            <p class="mt-2 text-slate-500 text-xl">Jogging is a form of trotting or running at a slow or leisurely pace.The term running can refer to any of a variety of speeds ranging from jogging to sprinting.The difference between running and jogging is intensity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-[700px] ease-in duration-200 my-10">
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-full md:w-48" src="./assests/yoga.jpg" alt="Modern building architecture">
+          </div>
+          <div class="p-8">
+            <p class="mt-2 text-slate-500 text-xl">Yoga is a practice that connects the body, breath, and mind. It uses physical postures, breathing exercises, and meditation to improve overall health. Yoga was developed as a spiritual practice thousands of years ago.</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-[700px] ease-in duration-200 my-10">
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-full md:w-48" src="./assests/gym.jpg" alt="Modern building architecture">
+          </div>
+          <div class="p-8">
+            <p class="mt-2 text-slate-500 text-xl">A gym is a place where people go to train and exercise, but also to unwind, socialize, and recharge. Therefore, a good gym is a facility that promotes physical activity, provides a safe, functional, and comfortable workout environment.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bg-orange-50 py-8">
+        <div>
+            <p class="text-4xl font-mono font text-center my-10">Impact of VitaliZenLife on clients across the globe</p>
+        </div>
+        <div class="flex justify-center items-center my-5">
+            <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
+                <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
             </div>
-            <input type="checkbox" name="" id="click">
-            <label for="click" class="menu-btn">
-                <i class="fa-solid fa-bars fa-2xl" style="color: #f705db;"></i>
-            </label>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <li><a href="./wellnessresources.html">Wellness Resources</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./signup.html">Signup</a></li>
-            </ul>
-        </nav>
-        <!-- contentno1 -->
-        <div class="second">
-            <div class="second1">
-            <h1 style="position:relative;top:10%;">Create Healthy habits , not restrictions</h1>
-            <p>Take care of your body. It's the only place you have to live. Let's build Wellness rather than treat disease. Healthy is an outfit that looks different on everybody.</p>
+            <div class="data w-36 h-28 flex flex-col items-center justify-center text-left leading-10">
+                <h2 class="text-3xl">1.8B+</h2>
+                <p>Calories burned</p>
+            </div>
         </div>
-        <div class="second2">
-            <button><a style="font-size:1.3rem;color:white;" href="#requestdemo">Request Demo</a></button>
-            <button><a style="font-size:1.3rem;color:white;" href="#requestdemo">View Pricing</a></button>
-        </div>
-    </div><br>
-    <!-- contentno2 -->
-    <div class="third">
-        <div class="third1">
-            <img src="./istockphoto-618982838-170667a.webp" alt="">
-            <p>Jogging is a form of trotting or running at a slow or leisurely pace.The term running can refer to any of a variety of speeds ranging from jogging to sprinting.The difference between running and jogging is intensity. </p>
-        </div><br>
-        <div class="third1">
-            <img src="./photo-1608272003912-cfe78f13fc68.avif" alt="">
-            <p>Yoga is a practice that connects the body, breath, and mind. It uses physical postures, breathing exercises, and meditation to improve overall health. Yoga was developed as a spiritual practice thousands of years ago. </p>
-        </div><br>
-        <div class="third1">
-            <img src="./photo-1540497077202-7c8a3999166f.avif" alt="">
-            <p>A gym is a place where people go to train and exercise, but also to unwind, socialize, and recharge. Therefore, a good gym is a facility that promotes physical activity, provides a safe, functional, and comfortable workout environment.</p>
-        </div>
-    </div><br><br>
-    <!-- contentno3 -->
-    <div class="fourth">
-        <h1>Impact of <span style="color: #dc0df8;">VitaliZenLife</span> on clients across the globe</h1><br>
-        <div class="box">
-            <div class="dataicons"><br>
-            <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
-        </div>
-            <div class="data">
-            <h2>1.8B+</h2>
-            <p>Calories burned</p>
-        </div>
-        </div><br>
-        <div class="box">
-            <div class="dataicons"><br>
+
+        <div class="flex justify-center items-center my-5">
+            <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
                 <i class="fa-solid fa-burger fa-2xl" style="color: #f40df8;"></i>
+            </div>
+            <div class="data w-36 h-28 flex flex-col items-center justify-center text-left leading-10">
+                <h2 class="text-3xl">30M</h2>
+                <p>BigMacs burned</p>
+            </div>
         </div>
-            <div class="data">
-            <h2>30M</h2>
-            <p>Bigmacs burned</p>
+
+        <div class="flex justify-center items-center my-5">
+            <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
+                <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
+            </div>
+            <div class="data w-36 h-28 flex flex-col items-center justify-center text-left leading-10">
+                <h2 class="text-3xl">19.4B</h2>
+                <p>Steps taken</p>
+            </div>
         </div>
-        </div><br>
-        <div class="box box3" style="margin-right:3%;">
-            <div class="dataicons"><br>
-                <i class="fa-solid fa-shoe-prints fa-2xl" style="color: #fb0edc;"></i>
+
+        <div class="flex justify-center items-center my-5">
+            <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
+                <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
+            </div>
+            <div class="data w-36 h-28 flex flex-col items-center justify-center text-left leading-10">
+                <h2 class="text-3xl">345x</h2>
+                <p>Around the globe</p>
+            </div>
         </div>
-            <div class="data">
-            <h2>19.4B</h2>
-            <p>Steps taken</p>
+
+      </div>
+
+      <div class="bg-slate-700 py-16 text-white text-center">
+        <h1 class="text-4xl leading-loose">Connect with over 50 apps</h1>
+        <p class="text-base my-10 w-[80vw] mx-auto">Easily link your <span class="text-[#da0af6]">VitaliZenLife</span> account with apps that support your healthier lifestyle. It's not just about calories. It's about feeling better , looking better and living better.</p>
+        <div class="flex flex-row items-center justify-center">
+            <div class="m-5">
+                <i class="fa-solid fa-capsules fa-2xl" style="color: #bc0efb;"></i><br>
+                <p class="py-5">Comfy health</p>
+            </div>
+            <div class="m-5">
+                <i class="fa-solid fa-user-nurse fa-2xl" style="color: #d309fb;"></i><br>
+                <p class="py-5">User Nurse</p>
+            </div>
+            <div class="m-5">
+                <i class="fa-solid fa-star-of-life fa-2xl" style="color: #ca27e3;"></i><br>
+                <p class="py-5">Star Life</p>
+            </div>
+            <div class="m-5">
+                <i class="fa-solid fa-house-medical fa-2xl" style="color: #d408fd;"></i><br>
+                <p class="py-5">House Medical</p>
+            </div>
         </div>
-        </div><br>
-        <div class="box">
-            <div class="dataicons"><br>
-                <i class="fa-solid fa-globe fa-2xl" style="color: #dc0df8;"></i>
+      </div>
+      
+      
+      <div class="fifth overflow-hidden">
+        <div class="section1">
+            <p class="text-lg">Powered by</p><br>
+            <div class="circle">
+                <i class="fa-solid fa-circle-radiation fa-2xl" style="color: #9708f7;"></i>&nbsp
+                <h3 class="text-xl font-semibold">VitaliZen <span style="font-weight:lighter;">Circle</span></h3>
+            </div><br><br>
+            <p>Experience the transformative journey with VitaliZenLife, where we collaborate to provide you an engaging
+                and rewarding wellness experience.</p><br><br>
+                <p>Follow us on: </p><br>
+            <div class="fifthicons">
+                <div class="contacticons"><a><i class="fa-brands fa-facebook fa-2xl" style="color: #0870f7;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-twitter fa-2xl" style="color: #0daaf2;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-linkedin fa-2xl" style="color: #066ff9;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-instagram fa-2xl" style="color: #e90cd6;"></i></a>
+                </div>
+            </div>
         </div>
-            <div class="data">
-            <h2>345x</h2>
-            <p>Around the Globe</p>
+        <div class="section2 leading-normal md:leading-loose" >
+            <h2 class="text-2xl font-extrabold">Resource Center</h2>
+            <a href="">Product Updates</a>
+            <a href="">Blog</a>
+            <a href="">Guides</a>
+            <a href="">Client success stories</a>
+            <a href="">FAQ's</a>
+            <a href="">Podcasts</a>
         </div>
-        </div><br>
-    </div><br>
-    <!-- contentno4 -->
-    <div class="fifth">
-        <h1>Connect with over 50 apps</h1><br>
-        <p>Easily link your <span style="color:#da0af6">VitaliZenLife</span> account with apps that support your healthier lifestyle. It's not just about calories. It's about feeling better , looking better and living better.</p><br><br>
-        <div class="fifthicons">
-        <div class="fifthicon">
-            <i class="fa-regular fa-capsules fa-2xl" style="color: #bc0efb;"></i><br>
-            <p>Comfy health</p>
+        <div class="section3 leading-normal md:leading-loose">
+            <h2 class="text-2xl font-extrabold">Company</h2><br>
+            <a href="">About us</a>
+            <a href="">Partners</a>
+            <a href="">Career</a>
+            <a href="">Contact Us</a>
+            <a href="">News</a>
+            <a href="">Integration</a>
+            <a href="">Download app</a>
+            <a href="">Become a Contributor</a>
         </div>
-        <div class="fifthicon">
-            <i class="fa-solid fa-user-nurse fa-2xl" style="color: #d309fb;"></i><br>
-            <p>User Nurse</p>
-        </div>
-        <div class="fifthicon">
-            <i class="fa-solid fa-star-of-life fa-2xl" style="color: #ca27e3;"></i><br>
-            <p>Star Life</p>
-        </div>
-        <div class="fifthicon">
-            <i class="fa-solid fa-house-medical fa-2xl" style="color: #d408fd;"></i><br>
-            <p>House Medical</p>
+        <div class="section4">
+            <div class=" flex items-center justify-center">
+                <img src="./assests/isoimage.png" alt="">
+            </div>
+            <div class="play2">
+                <p>Download the app</p><br>
+                <div class="btns">
+                    <button id="playstore"><i class="fa-brands fa-google-play fa-xl" style="color: #f4f6fb;"></i>&nbsp Get it on Google Play Store</button>
+                    <button id="playstore"><i class="fa-brands fa-apple fa-2xl" style="color: #fafcff;"></i>&nbsp Get it on Apple Play Store</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<!-- contentno5 -->
-<div class="sixth">
-    <div class="text">
-        <h1>Join us on Social Media Platforms</h1>
-    </div>
-    <div class="sixthicons">
-        <div class="contacticons"><a><i class="fa-brands fa-facebook fa-2xl" style="color: #0870f7;"></i></a></div>
-        <div class="contacticons"><a><i class="fa-brands fa-twitter fa-2xl" style="color: #0daaf2;"></i></a></div>
-        <div class="contacticons"><a><i class="fa-brands fa-linkedin fa-2xl" style="color: #066ff9;"></i></a></div>
-        <div class="contacticons"><a><i class="fa-brands fa-instagram fa-2xl" style="color: #e90cd6;"></i></a></div>
-    </div>
-</div>
-</div>
+
+
+
+
+<script>
+    let heading=document.getElementById("heading");
+    window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+            
+            // Check if the scroll position is greater than a certain threshold
+            if (value >= 400) {
+                // Add the hidden-heading class to hide the heading
+                heading.classList.add("hidden-heading");
+            } else {
+                // Remove the hidden-heading class to show the heading
+                heading.classList.remove("hidden-heading");
+            }
+        });
+    window.addEventListener('scroll',() => {
+        let value = window.scrollY;
+        
+        heading.style.marginTop = value * 2 + 'px';
+    })
+    function openNav() {
+        console.log("open")
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+        console.log("open")
+      document.getElementById("myNav").style.width = "0%";
+    }
+
+    const myNav = document.getElementById('mynav');
+    window.onscroll = function () { 
+        console.log(document.documentElement.scrollTop)
+    if (document.documentElement.scrollTop >= 400 ) {
+        myNav.classList.add("text-black");
+        myNav.classList.remove("text-white");
+        myNav.classList.add("bg-slate-300");
+        myNav.classList.remove("bg-transparent");
+        
+    } 
+    else {
+        myNav.classList.add("text-white");
+        myNav.classList.remove("text-black");
+        myNav.classList.add("bg-transparent");
+        myNav.classList.remove("bg-slate-300");
+        
+    }
+};
+
+    </script>
 </body>
 </html>
