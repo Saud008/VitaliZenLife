@@ -7,200 +7,177 @@
 </head>
 <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
 <style>
-    *{
-        margin:0px;
-        padding:0px;
-        box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;200&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color: #23242a;
+}
+.box{
+    position:relative;
+    width:380px;
+    height:420px;
+    background:#1c1c1c;
+    border-radius:8px;
+    overflow:hidden;
+}
+.box:before{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index:1;
+    transform-origin:bottom right;
+    animation:animate 6s linear infinite;
+}
+.box:after{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index:1;
+    transform-origin:bottom right;
+    animation:animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate {
+    0%{
+        transform:rotate(0deg);
     }
-    body{
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    100%{
+        transform:rotate(360deg);
     }
-    .container{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:column;
-        border:2px solid violet;
-        box-shadow: inset;
-        height:auto;
-        width:60%;
-        border-radius:5px;
-        position:relative;
-        top:150px;
-        left:20%;
-    }
-    .first,.second{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:column;
-        gap:14px;
-        font-size:1.7rem;
-        position:relative;
-        top:10px;
-    }
-    .first input[type="email"]{
-        padding:1.25rem;
-        height:1.5rem;
-        border-radius:5px;
-        border:2px solid violet;
-    }
-    .first input[type="password"]{
-        padding:1.25rem;
-        height:1.5rem;
-        border-radius:5px;
-        border:2px solid violet;
-    }
-    .first a{
-        text-decoration:none;
-        font-size:1.3rem;
-        color:violet;
-    }
-    .first button{
-        width:40%;
-        padding:0.8rem;
-        border-radius:10px;
-        background-color:rgb(215, 72, 215);
-        border:2px solid white;
-        color:white;
-        font-size:1.3rem;
-        font-weight:bolder;
-    }
-    .first button:hover{
-        cursor:pointer;
-        font-weight:bolder;
-    }
-    .google,.facebook{
-        display:flex;
-        justify-content: space-between;
-        border:2px solid violet;
-        padding:10px;
-        border-radius:5px;
-        width:100%;
-        font-size:1.3rem;
-    }
-    .google:hover{
-        background-color:violet;
-        color:white;
-        font-weight:bolder;
-        cursor:pointer;
-    }
-    .facebook:hover{
-        background-color:violet;
-        color:white;
-        font-weight:bolder;
-        cursor:pointer;
-    }
-    #googleicon{
-        margin:10px 0px 10px 10px;
-    }
-    .third{
-        font-size:1.2rem;
-    }
-    .third a{
-        text-decoration:none;
-        color:#e00efb;
-    }
-    @media (min-width:280px) and (max-width:359px){
-        .container{
-            width:auto;
-            display:flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items:center;
-            gap:8px;
-        }
-        .email,.password{
-            font-size:1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content:center;
-            align-items:center;
-        }
-        .email input[type="email"]{
-            position:relative;
-            top:-20px;
-            width:90%;
-        }
-        .password input[type="password"]{
-            position:relative;
-            top:-20px;
-            width:90%;
-        }
-        .password label{
-            position: relative;
-            top:-20px;
-        }
-        .second{
-            font-size:0.4rem;
-        }
-        .google,.facebook{
-            width:90%;
-        }
-    }
-    @media (min-width:360px) and (max-width:740px){
-        .container{
-            width:100%;
-            display:flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items:center;
-            gap:8px;
-        }
-        .email,.password{
-            display: flex;
-            flex-direction: column;
-            justify-content:center;
-            align-items:center;
-        }
-        .email input[type="email"]{
-            position:relative;
-            top:-20px;
-        }
-        .password label{
-            position: relative;
-            top:-10px;
-        }
-    }
-    @media (min-width:768px) and (max-width:1180px){
-        .container{
-            width:70%;
-            display:flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items:center;
-            gap:8px;
-        }
-    }
+}
+.box form{
+    position: absolute;
+    z-index:2;
+    inset:4px;
+    background:#222;
+    padding:50px 40px;
+    border-radius:8px;
+    display:flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box form h2{
+    text-align:center;
+    letter-spacing: 0.1em;
+    color:#fff;
+    font-weight:500;
+}
+.box form .inputbox{
+    position:relative;
+    width:300px;
+    margin-top:35px;
+}
+.box form .inputbox input{
+    position:relative;
+    width:100%;
+    padding:20px 10px 10px;
+    background:transparent;
+    outline:none;
+    box-shadow:none;
+    color:#000;
+    font-size:1em;
+    letter-spacing: 0.05em;
+    transition:0.5s;
+    z-index:10;
+    border:none;
+}
+.box form .inputbox span{
+    color:#8f8f8f;
+    position:absolute;
+    left:0;
+    padding:20px 0 10px;
+    pointer-events: none;
+    font-size:1em;
+    letter-spacing: 0.05em;
+    transition:0.5s;
+}
+.box form .inputbox input:valid~span,.box form .inputbox input:focus~span{
+    color:#fff;
+    font-size:0.75em;
+    transform:translateY(-34px);
+}
+.box form .inputbox i{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background:#fff;
+    border-radius:4px;
+    overflow:hidden;
+    transition:0.5s;
+    pointer-events: none;
+}
+.box form .inputbox input:valid~i,.box form .inputbox input:focus~i{
+    height:45px;
+}
+.box form .links{
+    display:flex;
+    justify-content:space-between;
+}
+.box form .links a{
+    text-decoration:none;
+    color:#8f8f8f;
+    margin:10px 0;
+    font-size: 0.75em;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2){
+    color:#fff;
+}
+.box form input[type="submit"]{
+    border:none;
+    outline:none;
+    background: #fff;
+    padding:9px 25px;
+    cursor:pointer;
+    font-size:0.9em;
+    border-radius:4px;
+    font-weight:600;
+    width:100px;
+    margin-top:10px;
+}
+.box form input[type="submit"]:active{
+    opacity:0.9;
+}
 </style>
 <body>
-    <fieldset style="border:2px solid white;">
-    <div class="container">
-        <br>
-        <legend><i class="fa-solid fa-user fa-flip fa-2xl" style="color: #1a191a;font-size: 2.4rem;"></i></legend>
-        <br>
-        <div class="first">
-            <div class="email">&nbsp &nbsp
-            <label style="font-weight:lighter;">E-mail: </label>&nbsp
-            <input type="email" placeholder="Enter Your E-mail" size="30">
+    <div class="box">
+        <form action="">
+            <h2>Sign in</h2>
+            <div class="inputbox">
+                <input type="email" required="required">
+                <span>E-mail</span>
+                <i></i>
             </div>
-            <div class="password">
-                <label>Password : </label>
-                <input type="password" placeholder="Enter Your Password" size="30">
+            <div class="inputbox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
             </div>
-            <a href="">Forget password?</a>
-            <button>Submit</button>
-        </div><br>
-        <p>OR</p><br>
-        <div class="second">
-            <div class="google"><i class="fa-brands fa-google fa-xl" id="googleicon" style="color: #e00efb;"></i>&nbsp Continue with Google</div>
-            <div class="facebook"><i class="fa-brands fa-facebook-f fa-xl" style="color: #f604ee;" id="googleicon"></i>&nbsp &nbspContinue with Facebook</div>
-        </div><br><br>
-        <div class="third">
-            <p>New to VitaliZenLife? <a href="./signup.html"> Create account</a></p>
-        </div>
-        <br>
+            <div class="links">
+                <a href="">Forget password</a>
+                <a href="">SignUp</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
     </div>
-</fieldset>
 </body>
 </html>
