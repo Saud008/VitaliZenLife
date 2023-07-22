@@ -273,7 +273,6 @@ a{
     position:relative;
 }
 .cards:hover{
-    width:41%;
     cursor:pointer;
 }
 .cards img{
