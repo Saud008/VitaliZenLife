@@ -576,6 +576,21 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .ml-7 {
   margin-left: 1.75rem;
 }
@@ -590,6 +605,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -624,14 +643,6 @@ video {
   height: 100vh;
 }
 
-.h-3 {
-  height: 0.75rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
 .w-12 {
   width: 3rem;
 }
@@ -640,12 +651,12 @@ video {
   width: 9rem;
 }
 
-.w-\[80vw\] {
-  width: 80vw;
+.w-\[50vw\] {
+  width: 50vw;
 }
 
-.w-full {
-  width: 100%;
+.w-\[80vw\] {
+  width: 80vw;
 }
 
 .w-fit {
@@ -653,12 +664,37 @@ video {
   width: fit-content;
 }
 
-.max-w-md {
-  max-width: 28rem;
+.w-full {
+  width: 100%;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.w-\[70vw\] {
+  width: 70vw;
+}
+
+.w-\[80\] {
+  width: 80;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[70\] {
+  width: 70;
+}
+
+
+.w-\[90vw\] {
+  width: 90vw;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-row {
@@ -693,17 +729,40 @@ video {
   border-radius: 0.75rem;
 }
 
-.border {
-  border-width: 1px;
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border-2 {
   border-width: 2px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-\[\#e20bfe\] {
   --tw-border-opacity: 1;
   border-color: rgb(226 11 254 / var(--tw-border-opacity));
+}
+
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
+.border-slate-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(100 116 139 / var(--tw-border-opacity));
+}
+
+.border-slate-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(71 85 105 / var(--tw-border-opacity));
 }
 
 .bg-orange-50 {
@@ -735,6 +794,18 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+
+
+.bg-\[\#e20bfe\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 11 254 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -756,6 +827,10 @@ video {
      object-fit: cover;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -764,16 +839,8 @@ video {
   padding: 2rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .px-10 {
@@ -809,6 +876,26 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .pb-10 {
@@ -866,6 +953,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
@@ -876,6 +968,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .leading-10 {
@@ -908,6 +1004,16 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-slate-700 {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.text-slate-600 {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -944,10 +1050,6 @@ video {
   border-width: 2px;
 }
 
-.hover\:border:hover {
-  border-width: 1px;
-}
-
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -974,16 +1076,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:h-full {
@@ -996,6 +1090,10 @@ video {
 
   .md\:w-\[40vw\] {
     width: 40vw;
+  }
+
+  .md\:w-\[50vw\] {
+    width: 50vw;
   }
 
   .md\:max-w-\[700px\] {
