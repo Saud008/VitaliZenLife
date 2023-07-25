@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./servicesstyle2.css">
+    <link rel="stylesheet" href="./cssfiles/servicesstyle1.css">
+    <link rel="stylesheet" href="./cssfiles/servicesstyle2.css">
 
 </head>
 <body>
@@ -13,9 +13,9 @@
         <div><i class="fa-solid fa-notes-medical fa-2xl text-4xl ml-7 mr-3" style="color: #e20bfe;"></i><span class="text-3xl mx-2">VitaliZenLife</span></div>
         <div class="hidden lg:block text-lg">
             <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./index.html">Home</a>
-            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./about.html">About</a>
-            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./services.html">Services</a>
-            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./wellnessresources.html">Wellness Resources</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="#about">About</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="#services">Services</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="../../Wellnes resources/dist/index.html">Wellness Resources</a>
         </div>
         <div>
             <a class="mx-3 " href="./login.html">
@@ -63,38 +63,9 @@
       </div>
       
         
-     
+     <script src="./Javascript/services.js"></script>
 
       
-      <script>
-        function openNav() {
-        console.log("open")
-      document.getElementById("myNav").style.width = "100%";
-    }
-    
-    function closeNav() {
-        console.log("open")
-      document.getElementById("myNav").style.width = "0%";
-    }
-
-    const myNav = document.getElementById('mynav');
-    window.onscroll = function () { 
-        console.log(document.documentElement.scrollTop)
-    if (document.documentElement.scrollTop >= 400 ) {
-        myNav.classList.add("text-black");
-        myNav.classList.remove("text-white");
-        myNav.classList.add("bg-slate-300");
-        myNav.classList.remove("bg-transparent");
-        
-    } 
-    else {
-        myNav.classList.add("text-white");
-        myNav.classList.remove("text-black");
-        myNav.classList.add("bg-transparent");
-        myNav.classList.remove("bg-slate-300");
-        
-    }
-};
-      </script>
+      
 </body>
 </html>
