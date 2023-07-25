@@ -1,0 +1,118 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Open Sans", -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.main{
+    display:flex;
+    width:100%;
+}
+span{
+    color:rgb(130, 7, 246);
+}
+.container{
+    width:40%;
+    background-color:#ffffff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height:50vh;
+    gap:20px;
+    border:2px solid white;
+    margin:40px 480px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.container h1{
+    font-weight:400;
+    font-size:1.7rem;
+}
+.container label{
+    font-size:18px;
+    font-weight:400;
+}
+input{
+    padding:10px;
+    width:70%;
+    border:2px solid rgb(219, 217, 217);
+    border-radius:5px;
+}
+.container button{
+    padding:14px;
+    width:60%;
+    background-color: #fc527e;
+    color:white;
+    font-size:1rem;
+    font-weight:bold;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.popup{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:10px;
+    width:30%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    visibility: hidden;
+    position:absolute;
+    top:30%;
+    padding:10px;
+    left:35%;
+}
+.popup img{
+    height:150px;
+    margin-top:-10%;
+    border:2px solid white;
+    border-radius:60%;
+}
+.popup a{
+    padding:13px;
+    width:40%;
+    border-radius:5px;
+    background-color: #4cd137;
+    border:none;
+    color:white;
+    font-weight:bold;
+    text-align: center;
+}
+.popup button{
+    background-color: #4cd137;
+    border:none;
+    color:white;
+}
+@media (min-width:360px) and (max-width:740px){
+    .container{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        margin:0 10px;
+    }
+    .container  h1{
+        text-align:center;
+    }
+    p{
+        text-align:center;
+    }
+    .popup{
+        width:100%;
+        left:10px;
+        right:20px;
+    }
+}

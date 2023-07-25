@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat SemiBold", Verdana, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container h1 {
+    font-weight: 200;
+    font-size: 2.5rem;
+}
+.bodycontent{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width:100%;
+    padding:40px;
+    position:relative;
+}
+.container .toc {
+    background-color: #c6d5eb;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    float: left;
+    gap: 25px;
+    text-indent: -1em;
+    padding-left: 1em;
+    padding:100px 12px;
+    border-radius:5px;
+    position:fixed;
+    top:20%;
+}
+.container .toc h3{
+    font-size:1.7rem;
+    color:#212121;
+    font-weight:200;
+    }
+.container .toc a {
+    text-decoration: none;
+    font-size:1.4rem;
+    color:#212121;
+    float:left;
+    text-align: center;
+}
+.container .toc a:hover{
+    color:blueviolet;
+}
+.container .bodycontent .rightbody{
+    width:75%;
+    padding:10px;
+    border-radius: 8px;
+    margin-left:25%;
+}
+.container .bodycontent .rightbody .targets{
+    width:75%;
+    background-color: #faf8f6;
+    padding:20px;
+}
+.theory1{
+    padding:20px;
+    width:80%;
+}
+.theory2,.theory4{
+    margin-left:7%;
+    width:50%;
+}
+.theory3{
+    background-color: #faf8f6;
+    width:53%;
+    background-color: #faf8f6;
+    padding:40px;
+    margin-left:7%;
+    border-radius:8px;
+    font-weight:900;
+}
+h2{
+    font-weight: 200;
+}
+.theory4 h1{
+    font-weight:500;
+    font-size:2.1rem;
+}
+@media (min-width:360px) and (max-width:740px){
+    .container{
+        height:auto;
+    }
+    .container h1{
+        font-size:1.7rem;
+        text-align:center;
+        font-weight:bold;
+    }
+    .bodycontent{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+    .bodycontent .toc{
+        position:relative;
+        width:100%;
+    }
+    .bodycontent .rightbody{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:100%;
+    }
+    .targets,.theory1{
+        min-width:170%;
+        margin-right:20%;
+    }
+    #h2tag{
+        font-size:1rem;
+        text-align:center;
+        padding:0;
+    }
+}
