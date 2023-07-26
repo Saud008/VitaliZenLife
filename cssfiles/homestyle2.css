@@ -184,3 +184,26 @@
     text-align: center;
 }
 }
+
+.hiddenEle{
+    opacity:0;
+    transform:translateX(-100%);
+    transition: all 1s;
+    transition-delay: 50ms;
+}
+.showEle{
+    opacity:1;
+    transform:translateX(0);
+}
+.popUp{
+    
+    opacity:0;
+    transform:translateY(30%);
+    transition: all 1s;
+    transition-delay: 50ms;
+}
+.popShow{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+}
