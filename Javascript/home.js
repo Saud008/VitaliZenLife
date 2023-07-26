@@ -50,3 +50,35 @@ function contactSubmit(){
     document.getElementById("comments").value=" "
     document.querySelector("form").reset();
 }
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('showEle');
+        }
+        else{
+            entry.target.classList.remove('showEle');
+        }
+        
+    })
+})
+
+const hiddenElements= document.querySelectorAll('.hiddenEle');
+hiddenElements.forEach((el) => observer.observe(el));
+
+const pop = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('popShow');
+        }
+        else{
+            entry.target.classList.remove('popShow');
+        }
+        
+    })
+})
+
+const popEle= document.querySelectorAll('.popUp');
+popEle.forEach((el) => pop.observe(el));
