@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequently Asked Questions</title>
-    <link rel="stylesheet" href="./cssfiles/nav.css">
     <link rel="stylesheet" href="./cssfiles/faq.css">
+    <link rel="stylesheet" href="./cssfiles/nav.css">
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-      <nav style="top:0;" id="mynav" class=" w-full h-20 flex justify-between items-center fixed z-50 text-black bg-slate-300 ease-in duration-200">
+    <nav style="top:0" id="mynav" class=" w-full h-20 flex justify-between items-center fixed z-50 text-black bg-slate-300 ease-in duration-200">
         <div><i class="fa-solid fa-notes-medical fa-2xl text-4xl ml-7 mr-3" style="color: #e20bfe;"></i><span class="text-3xl mx-2">VitaliZenLife</span></div>
         <div class="hidden lg:block text-lg">
             <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./index.html">Home</a>
@@ -23,19 +23,15 @@
                 <div class="hidden lg:block p-4 bg-slate-100 text-black rounded mx-5 hover:bg-slate-800 hover:border-2 hover:border-white hover:text-white ease-in duration-300">
                 Login / SignUp
                 </div>
-            </a>
-                
+            </a>  
         </div>
-        
-        
-        <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+        <div class="block lg:hidden mr-5 menu " style="cursor: pointer;" onclick="openNav()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
-        </div>
-        
+        </div> 
     </nav>
-    <div id="myNav" class="overlay" style="z-index: 1000;top:0;position:relative;">
+    <div id="myNav" class="overlay" style="z-index: 1000;">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
         <div class="overlay-content">
           <a href="./index.html">Home</a>
@@ -47,7 +43,8 @@
           </a>
         </div>
       </div>
-    <h2 style="font-family: 'Raleway',sans-serif;font-size:1.9rem;padding-top:5rem;">FAQ's(Frequently Asked Questions)</h2><br><br>
+
+    <h2 style="font-family: 'Raleway',sans-serif;font-size:1.9rem;padding-top: 5rem;">FAQ's(Frequently Asked Questions)</h2><br><br>
     <div class="accordian">
         <div class="question">
             <h4>Why should I use the Wellness Website?</h4><i class="icon active fa-solid fa-caret-down fa-2xl"></i>
@@ -113,6 +110,7 @@
             <p>Our products are a class apart from what you get in the market. We have studied the market for more than 2 years before launching our brand and have come up with products which will completely satisfy your overall health needs in terms of taste, hygiene and compliance to recommendations. We never want you to miss even one dose. Hence all our products will always be on travel sachets. We are also working on even better forms for your utmost convenience.</p>
         </div>
     </div><hr>
+
     <!-- Script -->
     <script src="./Javascript/faq.js"></script>
 </body>
