@@ -65,3 +65,95 @@ body{
         font-weight:500;
     }
 }
+.fifth{
+    display:flex;
+    height:auto;
+    width:100%;
+    padding:30px;
+    color:white;
+    background-color: #483a64;
+    gap:125px;
+}
+.section1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    width:35%;
+    margin-top:-5%;
+}
+.circle,.fifthicons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    gap:12px;
+}
+.fifthicons:hover{
+    cursor:pointer;
+}
+.section2,.section3{
+    width:21%;
+}
+.section2 a , .section3 a{
+    display:block;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+.section2 a:hover,.section3 a:hover{
+    text-decoration: underline;
+}
+.section4{
+    width:25%;
+}
+#playstore{
+    padding:18px 20px;
+    background-color: #f15162;
+    color:white;
+    font-weight:bolder;
+    border-radius: 5px;
+    width:50%;
+}
+.btns{
+    display:flex;
+    gap:5px;
+}
+#playstore:hover{
+    cursor:pointer;
+}
+@media (min-width:360px) and (max-width:740px){
+    .fifth{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:100%;
+    }
+    .fifth .section1{
+        margin-top:10%;
+        width:50%;
+    }
+    .fifth .section2,.fifth .section3{
+        width:50%;
+        margin-top:-10%;
+    }
+    .fifth .section4{
+        width:100%;
+        margin-top:-10%;
+        margin-right:10%;
+    }
+    .section4 .btns{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+    }
+    .section4 .btns #playstore{
+        width:80%;
+        padding:-10px;
+    }
+    .play2 p{
+        text-align: center;
+    }
+}
