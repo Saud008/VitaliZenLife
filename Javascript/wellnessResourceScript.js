@@ -124,7 +124,7 @@ function metricCalculateBodyf(){
     const heightCm = parseFloat(document.getElementById("BodyFatCmHeight").value);
     const weightKg = parseFloat(document.getElementById("BodyFatKgWeight").value);
     if (isNaN(heightCm) || isNaN(weightKg)) {
-        alert("Please enter valid height and weight.");
+        document.getElementById("metricBodyFatResult").innerText = "Please enter valid numbers.";
     return;
     }
     const heightM = heightCm / 100;
@@ -152,7 +152,7 @@ function usCalculateBodyf(){
     const hInch = parseFloat(document.getElementById("BodyFatInchtH").value);
     const weightLbs= parseFloat(document.getElementById("BodyFatLbsWeight").value);
     if (isNaN(hInch) || isNaN(hFeet) || isNaN(weightLbs)) {
-        alert("Please enter valid height and weight.");
+        document.getElementById("usBodyFatResult").innerText = "Please enter valid numbers.";
     return;
     }
     const heightInInches = hFeet * 12 + hInch;
