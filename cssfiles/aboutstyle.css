@@ -490,9 +490,15 @@ a{
     cursor:pointer;
 }
 
-.hiddenEle{
+
+.hiddenEleLeft{
     opacity:0;
     transform:translateX(-100%);
+    transition: all 1.5s;
+}
+.hiddenEleRight{
+    opacity:0;
+    transform:translateX(100%);
     transition: all 1.5s;
 }
 .showEle{
