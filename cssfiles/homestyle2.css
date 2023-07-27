@@ -1,6 +1,6 @@
-    *{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .menu{
     
     cursor: pointer;
@@ -195,13 +195,23 @@
     opacity:1;
     transform:translateX(0);
 }
+.app:nth-child(2){
+    transition-delay: 200ms;
+}
+.app:nth-child(3){
+    transition-delay: 400ms;
+}
+.app:nth-child(4){
+    transition-delay: 600ms;
+}
 .popUp{
     
     opacity:0;
-    transform:translateY(30%);
+    transform:translateY(20%);
     transition: all 1s;
     transition-delay: 50ms;
 }
+
 .popShow{
     opacity:1;
     transform:translateY(0);
