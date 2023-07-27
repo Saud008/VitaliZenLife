@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div class="container"><br>
-        <h1>Welcome to VitaliZenLife , Ask your queries!</h1><br>
+    <button class="chat" onclick="visible()"><i class="fa-solid fa-comment fa-2xl" style="color: #f0ecf1;"></i></button>
+    <button class="close" onclick="closing()"><i class="fa-solid fa-xmark-large fa-2xl"
+            style="color: #f4f5f6;"></i></button>
+    <div class="container">
+        <h1>Welcome to VitaliZenLife , Ask your queries?</h1>
         <p id="chatlog"></p>
-        <div class="inputbox">
-            <input type="text" id="chatbox" placeholder="Ask your Query?">
-            <button onkeydown="if(event.keyCode==13){talk()}" || onclick="talk()"><i
-                    class="fa-brands fa-telegram fa-2xl" id="icon" style="color: #fb05ff;"></i></button>
-        </div><br>
+        <input type="text" id="chatbox" placeholder="Enter your query?">
+        <button class="send" onclick="talk()">Send Query</button>
     </div>
 
     <!-- Script -->
