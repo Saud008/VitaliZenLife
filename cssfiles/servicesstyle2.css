@@ -5,7 +5,9 @@
     margin: 6px 0;
     transition: 0.4s;
 }
-
+nav{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -76,7 +78,7 @@ body {
     background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 #leftBg{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.636),rgba(0, 0, 0, 0.718)), url('./yogaBg.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.636),rgba(0, 0, 0, 0.718)), url('../Assets/yogaBg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -84,7 +86,15 @@ body {
     align-items: center;
 }
 #rightBg{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.365),rgba(0, 0, 0, 0.554)), url('./gymBg.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.365),rgba(0, 0, 0, 0.554)), url('../Assets/gymBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#middleBg{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.476),rgba(0, 0, 0, 0.656)), url('../Assets/nutritionBg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

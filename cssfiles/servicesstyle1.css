@@ -596,6 +596,12 @@ video {
 .h-\[50vh\] {
   height: 50vh;
 }
+.h-\[30vh\] {
+  height: 30vh;
+}
+.h-\[40vh\] {
+  height: 40vh;
+}
 
 .w-fit {
   width: -moz-fit-content;
@@ -800,6 +806,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 600;
 }
 
 .leading-loose {
