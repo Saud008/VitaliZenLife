@@ -1,148 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Resources</title>
-    <link rel="stylesheet" href="./wstyle.css">
+    <title>Wellness resources</title>
+    <link rel="stylesheet" href="./cssfiles/wellnessResourceStyle1.css">
+    <link rel="stylesheet" href="./cssfiles/wellnessResourceStyle2.css">
+    <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+    
 </head>
-<script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
-
 <body>
-    <div class="container">
-        <div class="bmicalci">
-            <div class="heading">
-                <i class="fa-solid fa-calculator fa-flip fa-2xl"></i>
-                <p>BMI Calculator</p>
-            </div><br>
-            <div class="navbar">
-                <nav>
-                    <a href="#">US Units</a>
-                    <a href="#">Metric Units</a>
-                </nav><br>
+<!-- Navigation bar -->
+    
+<nav id="mynav" class="bg-slate-300 text-black w-full h-20 flex justify-between items-center fixed z-50 ease-in duration-200">
+    <div><i class="fa-solid fa-notes-medical fa-2xl text-4xl ml-7 mr-3" style="color: #e20bfe;"></i><span class="text-3xl mx-2">VitaliZenLife</span></div>
+    <div class="hidden lg:block text-lg">
+        <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./index.html">Home</a>
+        <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./about.html">About</a>
+        <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./services.html">Services</a>
+        <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./wellnessresources.html">Wellness Resources</a>
+    </div>
+    <div>
+        <a class="mx-3 " href="./login.html">
+            <div class="hidden lg:block p-4 bg-slate-100 text-black rounded mx-5 hover:bg-slate-800 hover:border-2 hover:border-white hover:text-white ease-in duration-300">
+            Login / SignUp
             </div>
-            <div class="inputs">
-                <div class="box">
-                    <label>Age: </label>
-                    <input type="text" size="30" placeholder="Enter Your Age">
-                </div>
-                <div class="box">
-                    <label for="">Gender: </label>
-                    <input type="radio" name="gender" id="gender">Male
-                    <input type="radio" name="gender" id="gender">Female
-                </div>
-                <div class="box">
-                    <label>Height: </label>
-                    <input type="text" size="16" placeholder="Feet" id="feet">
-                    <input type="text" size="14" placeholder="Inches" id="inch">
-                </div>
-                <div class="box">
-                    <label>Weight: </label>
-                    <input type="text" size="30" placeholder="Pounds" id="weight">
-                </div>
-            </div>
-            <div class="calculate">
-                <button onclick="bmicalculate()">Calculate</button><br>
-                <p id="ans"></p><br>
-                <p id="conclusion"></p>
-            </div>
-        </div>
-        <div class="bodyfatcalci">
-            <div class="heading">
-                <i class="fa-solid fa-calculator fa-flip fa-2xl"></i>
-                <p>Body Fat Calculator</p>
-            </div><br>
-            <div class="navbar">
-                <nav>
-                    <a href="#">US Units</a>
-                    <a href="#">Metric Units</a>
-                </nav><br>
-            </div>
-            <div class="inputs">
-                <div class="box">
-                    <label>Age: </label>
-                    <input type="text" size="30" placeholder="Enter Your Age" id="age">
-                </div>
-                <div class="box">
-                    <label for="">Gender: </label>
-                    <input type="radio" name="gender" value="Male" id="">Male
-                    <input type="radio" name="gender" value="Female" id="">Female
+        </a>
+            
+    </div>
+    
+    
+    <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    
+</nav>
+<div id="myNav" class="overlay" style="z-index: 1000;">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+    <div class="overlay-content">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <a href="./wellnessresources.html">Wellness resources</a>
+      <a href="./login.html">
+        <div class=" border-2 border-[#e20bfe] hover:border-white rounded-xl w-fit m-auto text-center p-3 ">Login / SignUp</div>
+      </a>
+    </div>
+</div>
 
-                </div>
-                <div class="box">
-                    <label>Height: </label>
-                    <input type="text" size="16" placeholder="Feet" id="feet1">
-                    <input type="text" size="14" placeholder="Inches" id="inch1">
-                </div>
-                <div class="box">
-                    <label>Weight: </label>
-                    <input type="text" size="30" placeholder="Pounds" id="weight1">
-                </div>
-                <div class="box">
-                    <label>Neck: </label>
-                    <input type="text" size="16" placeholder="Feet" id="feet">
-                    <input type="text" size="14" placeholder="Inches" id="inch">
-                </div>
-                <div class="box">
-                    <label>Waist: </label>
-                    <input type="text" size="16" placeholder="Feet" id="feet">
-                    <input type="text" size="14" placeholder="Inches" id="inch">
-                </div>
-            </div>
-            <div class="calculate">
-                <button onclick="bodyfatcalculate()">Calculate</button><br>
-                <p id="ans2"></p><br>
-                <p id="conclusion2"></p>
-            </div>
+
+    <div class="flex flex-col justify-center items-center pt-24">
+        <h1 class="text-3xl text-center">BMI Calculator</h1>
+        <div class="my-3">
+            <button class="p-3 bg-cyan-500 ease-in duration-200" id="bmiUsBtn">US Units</button>
+            <button class="p-3 ease-in duration-200" id="bmiMetricBtn">Metric Units</button>
+        </div>
+        <div>
+            <table id="bmiUsCalc" class="block">
+                <tr>
+                    <td><label for="height">Height (Feets and inches):</label></td>
+                    <td>
+                        <input type="number" id="bmiHeightFeet" placeholder="feets" required class="w-20"> 
+                        <input type="number" id="bmiHeightInch" placeholder="inches" required class="w-20 my-2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="weight">Weight (Pounds):</label></td>
+                    <td><input type="number" id="bmiUsWeight" placeholder="in lbs" required class="w-40"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div class="flex items-center justify-center"><button id="bmiUsCalcBtn">Calculate BMI</button></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="usBmiResult" class="text-center"> </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table id="bmiMetricCalc" class="hidden">
+                <tr>
+                    <td><label for="height">Height (cm):</label></td>
+                    <td><input type="number" id="bmiCmHeight" placeholder="in cms" required></td>
+                </tr>
+                <tr>
+                    <td><label for="weight">Weight (kg):</label></td>
+                    <td><input type="number" id="bmiKgWeight" placeholder="in kgs" required></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2"><div class="flex items-center justify-center"><button id="bmiMetricCalcBtn">Calculate BMI</button></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="metricBmiResult" class="text-center"> </td>
+                </tr>
+            </table>
         </div>
     </div>
-    <script>
-        function bmicalculate() {
-            let f = parseFloat(document.getElementById("feet").value);
-            let i = parseFloat(document.getElementById("inch").value);
-            let w = parseFloat(document.getElementById("weight").value);
-            let res = document.getElementById("ans");
-            let c = document.getElementById("conclusion");
-            let h = parseFloat(((f) * 12) + (i));
-            let bmi = parseFloat((w * 703.701) / (h * h));
-            res.innerHTML = "Your BMI is: " + bmi;
-            if (bmi <= 16) {
-                c.innerHTML = "Severe Thinness";
-            } else if (bmi > 16 && bmi <= 17) {
-                c.innerHTML = "Moderate Thinness";
-            } else if (bmi > 17 && bmi <= 18.5) {
-                c.innerHTML = "Mild Thinness";
-            }
-            else if (bmi > 18.5 && bmi <= 25) {
-                c.innerHTML = "Normal";
-            } else if (bmi > 25 && bmi <= 30) {
-                c.innerHTML = "Overweight";
-            } else if (bmi > 30 && bmi <= 35) {
-                c.innerHTML = "Obese Class I";
-            }
-        }
-            function bodyfatcalculate() {
-                let f = parseFloat(document.getElementById("feet1").value);
-                let a = parseFloat(document.getElementById("age").value);
-                let i = parseFloat(document.getElementById("inch1").value);
-                let w = parseFloat(document.getElementById("weight1").value);
-                let res = document.getElementById("ans2");
-                let c = document.getElementById("conclusion2");
-                let h = parseFloat(((f) * 12) + (i));
-                let bmi = parseFloat((w * 703.701) / (h * h));
-                let gender = document.querySelector('input[name="gender"]:checked');
-                let g = gender ? gender.value : ""; // Retrieve the value of the selected gender
 
-                let bfc = 0;
-                if(g == "Female"){
-                    bfc = parseFloat((1.20 * bmi) + (0.23 * a) - 5.4);
-                } else {
-                    bfc = parseFloat((1.20 * bmi) + (0.23 * a) - 16.2)
-                }
-                res.innerHTML = "Your Body Fat percentage is: " + bfc;
-            }
-    </script>
+
+    <div class="flex flex-col justify-center items-center pt-10" >
+        <h1 class="text-3xl text-center">Body Fat Calculator</h1>
+        <div class="my-3">
+            <button class="p-3 bg-cyan-500 ease-in duration-200" id="usBtnBodyFat">US Units</button>
+            <button class="p-3  ease-in duration-200" id="metricBtnBodyFat">Metric Units</button>
+        </div>
+        <div>
+            <table id="BodyFatUsCalc" class="block">
+                <tr>
+                    <td><label for="">Gender: </label></td>
+                    <td>
+                        <select id="genderUs" name="gender" class="border-2 border-slate-500">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="BodyFatAgeU" placeholder="age" required class="w-40"></td>
+                </tr>
+                <tr>
+                    <td><label for="height">Height (Feets and inches):</label></td>
+                    <td>
+                        <input type="number" id="BodyFatFeetH" placeholder="feets" required class="w-20"> 
+                        <input type="number" id="BodyFatInchtH" placeholder="inches" required class="w-20 my-2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="weight">Weight (lbs):</label></td>
+                    <td><input type="number" id="BodyFatLbsWeight" placeholder="in lbs" required class="w-40"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div class="flex items-center justify-center"><button id="BodyFatUsCalcBtn">Calculate Body Fat</button></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="usBodyFatResult" class="text-center"> </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table id="BodyFatmetricCalc" class="hidden">
+                <tr>
+                    <td><label for="">Gender: </label></td>
+                    <td>
+                        <select id="genderMetric" name="gender" class="border-2 border-slate-500">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="BodyFatAgeM" placeholder="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="height">Height (cm):</label></td>
+                    <td><input type="number" id="BodyFatCmHeight" placeholder="in cms" required></td>
+                </tr>
+                <tr>
+                    <td><label for="weight">Weight (kg):</label></td>
+                    <td><input type="number" id="BodyFatKgWeight" placeholder="in kgs" required></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2"><div class="flex items-center justify-center"><button id="BodyFatMetricCalcBtn">Calculate BMI</button></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="metricBodyFatResult" class="text-center"> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./Javascript/wellnessResourceScript.js"></script>
 </body>
-
 </html>

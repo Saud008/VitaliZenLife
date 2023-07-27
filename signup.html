@@ -1,210 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup with VitaliZenLife</title>
-    <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./cssfiles/signup.css">
 </head>
-<style>
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 15px;
-        border: 2px solid violet;
-        height: auto;
-        position: relative;
-        top: 50px;
-        width: 60%;
-        border-radius: 5px;
-        left: 20%;
-    }
-
-    .name,
-    .gender,
-    .age,
-    .Mobileno,
-    .E-mail,
-    .Password,
-    .reenterpass {
-        font-size: 1.5rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-        padding: 1rem;
-        border-radius: 5px;
-        border: 2px solid violet;
-    }
-
-    input[type="radio"] {
-        width: 60px;
-        height: 20px;
-    }
-
-    input[type="radio"]:hover {
-        cursor: pointer;
-    }
-
-    .gender {
-        margin-left: -3%;
-    }
-
-    .Mobileno {
-        margin-left: -8%;
-    }
-
-    .E-mail {
-        margin-left: -1%;
-    }
-
-    .Password {
-        margin-left: -4%;
-    }
-
-    .reenterpass {
-        margin-left: -11%;
-    }
-
-    button {
-        padding: 1rem;
-        border-radius: 5px;
-        background-color: violet;
-        font-size: 1.4rem;
-        border: 2px solid grey;
-        color: white;
-        font-weight: bolder;
-    }
-
-    button:hover {
-        cursor: pointer;
-    }
-
-    @media (min-width:360px) and (max-width:940px) {
-        .container {
-            width: 100%;
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 10px;
-            border:2px solid white;
-        }
-
-        .name,
-        .age,
-        .Mobileno,
-        .E-mail,
-        .Password,
-        .reenterpass {
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin:20px 0;
-        }
-        .gender{
-            font-size:0.9rem;   
-            }
-        button{
-            padding:0.7rem;
-            font-size:0.9rem;
-        }    
-    }
-    @media (min-width:280px) and (max-width:359px){
-        .container{
-            width:auto;
-            border:2px solid white;
-        }
-        .name,
-        .age,
-        .Mobileno,
-        .E-mail,
-        .Password,
-        .reenterpass {
-            font-size: 0.7rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin:20px 0;
-        }
-        .gender{
-            font-size:0.7rem;
-        }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-        padding: 0.1rem;
-        border-radius: 5px;
-        border: 2px solid violet;
-        width:70%;
-    }
-
-    input[type="radio"] {
-        width: 30px;
-        height: 10px;
-    }
-    button{
-        padding:0.5rem;
-        font-size:0.7rem;
-    }
-    }
-</style>
 
 <body>
-    <form action="https://formsubmit.co/deeb0de6fc36e2687c638468de65533b" method="POST" >
-    <div class="container"><br>
-        <i class="fa-solid fa-user-plus fa-2xl" style="font-size:2.4rem;"></i><br>
-        <div class="name">
-            <label>Name: </label>
-            <input type="text" size="30" placeholder="Enter Your Name">
+    <div class="main">
+        <div class="container">
+            <br>
+            <h1>Get Started with <span>VitaliZenLife</span></h1>
+            <label>E-mail</label>
+            <input type="email" required="required" placeholder="name123@gmail.com">
+            <label>Mobile Number</label>
+            <input type="text" required="required" placeholder="1234567890">
+            <label>Full name</label>
+            <input type="text" required="required" placeholder="FullName">
+            <label>Password</label>
+            <input type="password" value="" placeholder="8 characters minimum">
+            <p>By signing up, you agree to our <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.</p>
+            <button onclick="popup()">Create account</button>
+            <p>Already have an account?<a href="./login.html">Login</a></p><br>
         </div>
-        <div class="gender">
-            <label>Gender: </label>
-            <input type="radio" value="Male" name="gender">Male
-            <input type="radio" value="Female" name="gender">Female
-        </div>
-        <div class="age">
-            <label>Age: </label>&nbsp
-            <input type="text" size="30" placeholder="Enter Your Age">
-        </div>
-        <div class="Mobileno">
-            <label>Mobile Number: </label>
-            <input type="text" size="30" placeholder="Enter Your Mobile Number">
-        </div>
-        <div class="E-mail">
-            <label>E-mail: </label>
-            <input type="email" size="30" placeholder="Enter Your E-mail">
-        </div>
-        <div class="Password">
-            <label>Password: </label>
-            <input type="password" size="30" placeholder="Enter Your Password">
-        </div>
-        <div class="reenterpass">
-            <label>Re-enter password: </label>
-            <input type="password" size="30" placeholder="Enter Your Password again">
-        </div>
-        <button>Create account</button>
+    </div>
+    <div class="popup">
+        <img src="./Images/sign.png" alt="">
+        <h3>Welcome to VitaliZenLife</h3>
+        <p>Your account has been created successfully.</p>
+        <a style="color:white;" href="./index.html"><button>OK</button></a>
         <br>
     </div>
-</form>
+    <script src="./Javascript/signup.js"></script>
 </body>
-
 </html>

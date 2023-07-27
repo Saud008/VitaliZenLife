@@ -7,144 +7,22 @@
     <title>Chatbot-VitaliZenLife</title>
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./cssfiles/chatbot.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: poppins, sans-serif;
-    }
-
-    .container {
-        border: 2px solid rgb(216, 66, 216);
-        height: auto;
-        width: 50%;
-        position: fixed;
-        right: 4%;
-        bottom: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-    }
-
-    .container h1 {
-        /* text-decoration: underline; */
-        font-size: 2em;
-        border-right: 3px solid rgb(236, 23, 236);
-        width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 10s steps(31, end) infinite forwards;
-        color:blueviolet;
-    }
-    @keyframes typing {
-    0%{
-        width:0;
-    }
-    50%{
-        width:90%;
-    }
-}
-    .inputbox {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 2px;
-    }
-
-    #chatbox {
-        width: 70%;
-        border: 3px solid rgb(169, 53, 169);
-        padding: 1.23rem;
-        border-radius: 6px;
-        font-size: 0.9rem;
-    }
-
-    .inputbox #icon {
-        border: 3px solid rgb(169, 53, 169);
-        padding: 1.64rem;
-        border-radius: 6px;
-        font-size: 3rem;
-    }
-
-    .inputbox button {
-        background-color: white;
-        border: 2px solid white;
-    }
-
-    .inputbox button:hover {
-        cursor: pointer;
-    }
-    @media (min-width:360px) and (max-width:740px){
-        .container{
-            width:90%;
-        }
-        .container h1{
-            font-size:0.85rem;
-        }
-        #chatbox{
-            padding:5px;
-        }
-        .inputbox #icon{
-            padding:0.9rem;
-            font-size: 1.5rem;
-        }
-    }
-</style>
 <body>
-    <div class="container"><br>
-        <h1>Welcome to VitaliZenLife , Ask your queries!</h1><br>
+    <button class="chat" onclick="visible()"><i class="fa-solid fa-comment fa-2xl" style="color: #f0ecf1;"></i></button>
+    <button class="close" onclick="closing()"><i class="fa-solid fa-xmark-large fa-2xl"
+            style="color: #f4f5f6;"></i></button>
+    <div class="container">
+        <h1>Welcome to VitaliZenLife , Ask your queries?</h1>
         <p id="chatlog"></p>
-        <div class="inputbox">
-            <input type="text" id="chatbox" placeholder="Ask your Query?">
-            <button onkeydown="if(event.keyCode==13){talk()}" || onclick="talk()"><i
-                    class="fa-brands fa-telegram fa-2xl" id="icon" style="color: #fb05ff;"></i></button>
-        </div><br>
+        <input type="text" id="chatbox" placeholder="Enter your query?">
+        <button class="send" onclick="talk()">Send Query</button>
     </div>
-    <script>
-        know = {
-            "Hello": "Hi there , how can I assist you?",
-            "Who are you?": "I am VitaliZenLife's Chatbot!",
-            "How are you?": "I am fine , what about you?",
-            "Tell me something about VitaliZenLife": "VitaliZenLife is a health and wellness website",
-            "Who are the founders of VitaliZenLife?": "Founders of VitaliZenLife are Abhinav Choukse , Rahul Birawat and Saud!",
-            "Destroy yourself": "As an ai tool , I can't destroy myself and it is against our website's rules and regulations.Please let me know what mistake I have done?",
-            "Bye": "Good Bye! Have a good day",
-            "What is Yoga?": "Yoga is essentially a spiritual discipline based on an extremely subtle Science which focuses on bringing harmony between mind and body. It is an art and science for healthy living.",
-            "What is the meaning of the word 'Yoga'?": "Meaning of Yoga is 'To Unite'",
-            "Ok thanks": "Welcome! Please let me know if you have other queries."
-        };
-        function talk() {
-            document.getElementById("chatlog").style.width = "70%";
-            let user = document.getElementById("chatbox").value;
-            document.getElementById("chatbox").value = "";
-            document.getElementById("chatlog").innerHTML += user + "<br>";
-            if (user in know) {
-                document.getElementById("chatlog").style.transition = "all 0.3s ease";
-                document.getElementById("chatlog").innerHTML += know[user] + "<br>";
-                document.getElementById("chatlog").style.backgroundColor = "#fff";
-                document.getElementById("chatlog").style.color = "black";
-                document.getElementById("chatlog").style.fontWeight = "bolder";
-            } else {
-                document.getElementById("chatlog").innerHTML += "I don't understand";
-                document.getElementById("chatlog").style.backgroundColor = "#fff";
-                document.getElementById("chatlog").style.color = "black";
-                document.getElementById("chatlog").style.fontWeight = "bolder";
-                document.getElementById("chatlog").innerHTML += "<br>";
-            }
-            document.getElementById("chatlog").innerHTML += "<br>";
-        }
-    </script>
+
+    <!-- Script -->
+    <script src="./Javascript/chatbot.js"></script>
 </body>
 
 </html>

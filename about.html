@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About VitaliZenLife</title>
-    <link rel="stylesheet" href="./aboutstyle.css">
+    <link rel="stylesheet" href="./cssfiles/aboutstyle.css">
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-     <nav>
+    <nav>
         <div class="logo"> <i class="fa-solid fa-notes-medical fa-2xl" style="color: #e20bfe;"></i>
          <p>VitaliZenLife</p>
         </div>
@@ -19,15 +19,14 @@
             <i class="fa-solid fa-bars fa-2xl" style="color: #f705db;"></i>
         </label>
         <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="./about.html">About</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html" class="active">About</a></li>
             <li><a href="./services.html">Services</a></li>
-            <li><a href="#blogs">Blogs</a></li>
             <li><a href="./wellnessresources.html">Wellness Resources</a></li>
             <li><a href="./login.html">Login</a></li>
             <li><a href="./signup.html">Signup</a></li>
         </ul>
-    </nav><br><br><br><br>
+    </nav><br><br><br><br><br>
     <div class="first">
         <div class="left">
             <button id="firstbtn">About us</button>
@@ -37,7 +36,7 @@
             <button id="talkbutton"><a href="./chatbot.html">Let's Talk</a></button>
         </div>
         <div class="right">
-            <img src="./istockphoto-1185085923-612x612.jpg" alt="">
+            <img src="./Images/istockphoto-1185085923-612x612.jpg" alt="">
         </div>
     </div>
     <div class="second">
@@ -45,7 +44,7 @@
             “Good health is not something we can buy. However, it can be an extremely valuable savings account".<span
                 style="color:rgb(244, 6, 189);font-weight:bolder;">VitaliZenLife</span> can help you stay healthy and
             live a healthy life.There are three words in VitaliZenLife i.e, Vital means important,Zen refers to buddhism
-            word which stands for calmness and life is what we call zindagi.
+            word which stands for calmness and life is what we call Zindagi.
         </p>
     </div>
     <div class="third">
@@ -93,17 +92,17 @@
     <div class="fourth">
         <h1>Global Presence</h1><br><br><br>
         <div class="cards">
-            <div class="cd">
-                <img src="./asset 5.png" alt="">
+            <div class="cd hiddenEle">
+                <img src="./Images/asset 5.png" alt="">
             </div>
-            <div class="cd">
-                <img src="./asset 6.png" alt="">
+            <div class="cd hiddenEle">
+                <img src="./Images/asset 6.png" alt="">
             </div>
-            <div class="cd">
-                <img src="./asset 7.png" alt="">
+            <div class="cd hiddenEle">
+                <img src="./Images/asset 7.png" alt="">
             </div>
-            <div class="cd">
-                <img src="./asset 8.png" alt="">
+            <div class="cd hiddenEle">
+                <img src="./Images/asset 8.png" alt="">
             </div>
         </div>
     </div><br><br>
@@ -134,7 +133,7 @@
             <a href="">Blog</a><br>
             <a href="">Guides</a><br>
             <a href="">Client success stories</a><br>
-            <a href="">FAQ's</a><br>
+            <a href="./faq.html">FAQ's</a><br>
             <a href="">Podcasts</a><br>
         </div>
         <div class="section3">
@@ -150,7 +149,7 @@
         </div>
         <div class="section4">
             <div class="play1">
-                <img src="./isoimage.png" alt="">
+                <img src="./Images/isoimage.png" alt="">
             </div><br><br>
             <div class="play2">
                 <p>Download the app</p><br>
@@ -161,16 +160,10 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('scroll',()=>{
-            const header = document.querySelector('nav');
-            if(window.scrollY > 0){
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        })
-    </script>
-</body>
 
+
+<!-- Script -->
+    <script src="./Javascript/about.js"></script>
+
+</body>
 </html>
