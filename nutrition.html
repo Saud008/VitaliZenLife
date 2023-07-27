@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Plans</title>
+    <link rel="stylesheet" href="./cssfiles/nutritionstyle.css">
+    <link rel="stylesheet" href="./cssfiles/nav.css">
+    <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="mynav" class=" w-full h-20 flex justify-between items-center fixed z-50 text-black bg-slate-300 ease-in duration-200">
+        <div><i class="fa-solid fa-notes-medical fa-2xl text-4xl ml-7 mr-3" style="color: #e20bfe;"></i><span class="text-3xl mx-2">VitaliZenLife</span></div>
+        <div class="hidden lg:block text-lg">
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./index.html">Home</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./about.html">About</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./services.html">Services</a>
+            <a class="px-5 py-5 rounded-xl h-20 hover:bg-slate-200 hover:text-slate-800 ease-in duration-300" href="./wellnessresources.html">Wellness Resources</a>
+        </div>
+        <div>
+            <a class="mx-3 " href="./login.html">
+                <div class="hidden lg:block p-4 bg-slate-100 text-black rounded mx-5 hover:bg-slate-800 hover:border-2 hover:border-white hover:text-white ease-in duration-300">
+                Login / SignUp
+                </div>
+            </a>
+                
+        </div>
+        
+        
+        <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+    </nav>
+    <div id="myNav" class="overlay" style="z-index: 1000;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+        <div class="overlay-content">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./wellnessresources.html">Wellness resources</a>
+          <a href="./login.html">
+            <div class=" border-2 border-[#e20bfe] hover:border-white rounded-xl w-fit m-auto text-center p-3 ">Login / SignUp</div>
+          </a>
+        </div>
+      </div>
+      
+    
+    <div class="container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.421),rgba(0, 0, 0, 0.592)), url('../Images/SLIDE_01.jpg');">
+        <h1>Who says Eating Healthy is Boring?</h1>
+        <p></p>
+    </div><br><br>
+    <div class="content1">
+        <div class="text">
+            <h1>It's not just food ,<br> <span>It's a Lifestyle.</span></h1>
+            <p>We break the stereotype ‘healthy eating is boring”. Reach your weight, health and workout goals with
+                deliciously healthy food. We have various diet plans customised to suit your specific health and weight
+                requirements. With a new changing menu every week, we bring to you food from various cuisines, with a
+                healthy twist. We make healthy eating fun and effortless!</p>
+        </div>
+        <div class="othertext">
+            <ul>
+                <li>Custom tailored diet plans.</li>
+                <li>Free from refined sugars & trans fats.</li>
+                <li>Different menu every day.</li>
+                <li>Flexibility of plans</li>
+                <li>Ongoing nutritionist support.</li>
+            </ul>
+        </div>
+    </div><br><br>
+    <div class="diet">
+        <h1>Balanced Diet</h1><br><br>
+        <h2>What is Balanced Diet?
+        </h2>
+        <p>A balanced diet gives your body the nutrients it needs to function correctly. To get the nutrition you need, most of your daily calories should come from:</p>
+        <p>1.Fresh Fruits</p>
+        <p>2.Fresh Vegetables</p>
+        <p>3.Whole grains</p>
+        <p>4.Legumes</p>
+        <p>5.Nuts</p>
+        <p>6.Lean protiens</p>
+        <h2>Why a balanced diet is important?</h2>
+        <p>A balanced diet supplies the nutrients your body needs to work effectively. Without balanced nutrition, your body is more prone to disease, infection, fatigue, and low performance.</p>
+        <p>Children who don’t get enough healthy foods may face growth and developmental problems, poor academic performance, and frequent infections.They can also develop unhealthy eating habits that may persist into adulthood.</p>
+        <p>Without exercise, they’ll also have a higher risk of obesity and various diseases that make up metabolic syndrome, such as type 2 diabetes and high blood pressure.</p><br>
+        <h2>What to eat for a balanced diet?</h2>
+        <p>A healthy, balanced diet will usually include the following nutrients:</p>
+        <p>1.Vitamins and Minerals</p>
+        <p>2.Carbohydrates</p>
+        <p>3.Fats</p>
+        <p>4.Proteins</p><br>
+        <h2 id="Sources">Sources of Nutrients:</h2>
+        <br>
+        <div class="cards">
+            <div class="card">
+                <h3>Vitamins & Minerals</h3>
+                <img src="./Images/vitamins.avif" alt="">
+                <p>Fresh fruits</p>
+                <p>Green Vegetables</p>
+                <p>Dairy Products</p>
+                <p>Nuts</p>
+            </div>
+            <div class="card">
+                <h3>Carbohydrates</h3>
+                <img src="./Images/carbo.avif" alt="">
+                <p>Chocolates</p>
+                <p>Sweet Potato</p>
+                <p>Beans</p>
+                <p>Fruits</p>
+            </div>
+            <div class="card">
+                <h3>Fats</h3>
+                <img src="./Images/fats.avif" alt="">
+                <p>Sunflower</p>
+                <p>Olive</p>
+                <p>Milk</p>
+                <p>Fish</p>
+            </div>
+            <div class="card">
+                <h3>Proteins</h3>
+                <img src="./Images/proteins.avif" alt="">
+                <p>Seafood</p>
+                <p>Soyabean</p>
+                <p>Eggs</p>
+                <p>Cheese</p>
+            </div>
+        </div><br><br>
+    </div>
+    </div>
+    <div class="fifth">
+        <div class="section1">
+            <p>Powered by</p><br>
+            <div class="circle">
+                <i class="fa-solid fa-circle-radiation fa-2xl" style="color: #9708f7;"></i>&nbsp
+                <h3>VitaliZen <span style="font-weight:lighter;">Circle</span></h3>
+            </div><br><br>
+            <p>Experience the transformative journey with VitaliZenLife, where we collaborate to provide you an engaging
+                and rewarding wellness experience.</p><br><br>
+            <p>Follow us on: </p><br>
+            <div class="fifthicons">
+                <div class="contacticons"><a><i class="fa-brands fa-facebook fa-2xl" style="color: #0870f7;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-twitter fa-2xl" style="color: #0daaf2;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-linkedin fa-2xl" style="color: #066ff9;"></i></a>
+                </div>
+                <div class="contacticons"><a><i class="fa-brands fa-instagram fa-2xl" style="color: #e90cd6;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <h2>Resource Center</h2><br>
+            <a href="">Product Updates</a><br>
+            <a href="">Blog</a><br>
+            <a href="">Guides</a><br>
+            <a href="">Client success stories</a><br>
+            <a href="./faq.html">FAQ's</a><br>
+            <a href="">Podcasts</a><br>
+        </div>
+        <div class="section3">
+            <h2>Company</h2><br>
+            <a href="">About us</a><br>
+            <a href="">Partners</a><br>
+            <a href="">Career</a><br>
+            <a href="">Contact Us</a><br>
+            <a href="">News</a><br>
+            <a href="">Integration</a><br>
+            <a href="">Download app</a><br>
+            <a href="">Become a Contributor</a><br>
+        </div>
+        <div class="section4">
+            <div class="play1">
+                <img src="./Images/isoimage.png" alt="">
+            </div><br><br>
+            <div class="play2">
+                <p>Download the app</p><br>
+                <div class="btns">
+                    <button id="playstore"><i class="fa-brands fa-google-play fa-xl" style="color: #f4f6fb;"></i>&nbsp
+                        Get it on Google Play Store</button>
+                    <button id="playstore"><i class="fa-brands fa-apple fa-2xl" style="color: #fafcff;"></i>&nbsp Get it
+                        on Apple Play Store</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const textArray = [
+            "Meal Plan Subscriptions",
+            "Get a Customised Diet Plan",
+            "Who says Eating Healthy is Boring?"
+        ];
+        const paraArray = [
+            "We have got different meal plans to cater your specific requirements be it weight loss,staying healthy or building muscles",
+            "Consult our nutritionist and get a specified Diet plan for yourself."
+        ]
+        const container = document.querySelector('.container h1');
+        const para = document.querySelector('.container p');
+        function updateText(index) {
+            container.textContent = textArray[index];
+            para.textContent = paraArray[index];
+        }
+        let currIndex = 0;
+        function changeText() {
+            updateText(currIndex);
+            currIndex = (currIndex + 1) % 3;
+        }
+        setInterval(changeText,4000);
+
+
+
+    </script>
+</body>
+
+</html>
