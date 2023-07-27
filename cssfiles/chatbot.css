@@ -1,91 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
-
-    * {
+ * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
     body {
-        font-family: poppins, sans-serif;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .chat {
+        padding: 15px;
+        border: none;
+        border-radius: 50%;
+        background-color: blueviolet;
+        cursor: pointer;
+        /* position:absolute; */
     }
 
     .container {
-        border: 2px solid rgb(216, 66, 216);
-        height: auto;
-        width: 50%;
-        position: fixed;
-        right: 4%;
-        bottom: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-    }
-
-    .container h1 {
-        /* text-decoration: underline; */
-        font-size: 2em;
-        border-right: 3px solid rgb(236, 23, 236);
-        width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 10s steps(31, end) infinite forwards;
-        color:blueviolet;
-    }
-    @keyframes typing {
-    0%{
-        width:0;
-    }
-    50%{
-        width:90%;
-    }
-}
-    .inputbox {
-        width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
-        gap: 2px;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+        padding: 30px 0;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin: 3% 20%;
+        visibility: hidden;
     }
 
-    #chatbox {
-        width: 70%;
-        border: 3px solid rgb(169, 53, 169);
-        padding: 1.23rem;
-        border-radius: 6px;
-        font-size: 0.9rem;
+    .container h1 {
+        font-size: 1.5rem;
+        border-right: 2px solid black;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 10s steps(31, end) infinite forwards;
+        width: 0;
     }
 
-    .inputbox #icon {
-        border: 3px solid rgb(169, 53, 169);
-        padding: 1.64rem;
-        border-radius: 6px;
-        font-size: 3rem;
+    @keyframes typing {
+        0% {
+            width: 0;
+        }
+
+        50% {
+            width: 90%;
+        }
     }
 
-    .inputbox button {
-        background-color: white;
-        border: 2px solid white;
+    input[type="text"] {
+        padding: 10px 15px;
+        width: 50%;
+        border-radius: 5px;
+        border: 2px solid grey;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
     }
 
-    .inputbox button:hover {
+    .send {
+        padding: 12px 10px;
+        width: 40%;
+        border-radius: 5px;
+        background-color: #e74c3c;
+        border: none;
+        color: white;
+        font-weight: bolder;
+        font-size: 1rem;
         cursor: pointer;
     }
-    @media (min-width:360px) and (max-width:740px){
-        .container{
-            width:90%;
-        }
-        .container h1{
-            font-size:0.85rem;
-        }
-        #chatbox{
-            padding:5px;
-        }
-        .inputbox #icon{
-            padding:0.9rem;
-            font-size: 1.5rem;
-        }
+
+    .close {
+        visibility: hidden;
+        padding: 15px;
+        border: none;
+        border-radius: 50%;
+        background-color: blueviolet;
+        cursor: pointer;
     }
