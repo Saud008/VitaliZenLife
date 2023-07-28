@@ -48,4 +48,4 @@ The website is divided into the following main pages:
 
 ## Website
 
-Website Link- https://abhinav-378.github.io/mywebsite/
+Website Link- https://abhinav-378.github.io/VitaliZenLife/
