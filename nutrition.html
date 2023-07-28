@@ -29,7 +29,7 @@
         </div>
         
         
-        <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+        <div class="block lg:hidden mr-5 menu" style="cursor: pointer;" onclick="openNav()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -187,32 +187,7 @@
             </div>
         </div>
     </div>
-    <script>
-        const textArray = [
-            "Meal Plan Subscriptions",
-            "Get a Customised Diet Plan",
-            "Who says Eating Healthy is Boring?"
-        ];
-        const paraArray = [
-            "We have got different meal plans to cater your specific requirements be it weight loss,staying healthy or building muscles",
-            "Consult our nutritionist and get a specified Diet plan for yourself."
-        ]
-        const container = document.querySelector('.container h1');
-        const para = document.querySelector('.container p');
-        function updateText(index) {
-            container.textContent = textArray[index];
-            para.textContent = paraArray[index];
-        }
-        let currIndex = 0;
-        function changeText() {
-            updateText(currIndex);
-            currIndex = (currIndex + 1) % 3;
-        }
-        setInterval(changeText,4000);
-
-
-
-    </script>
+   <script src="./Javascript/nutrition.js"></script>
 </body>
 
 </html>
