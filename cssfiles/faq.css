@@ -5,7 +5,7 @@
     font-family:'poppins',sans-serif;
 }
 body{
-    background-color: rgb(255,215,255);
+    background-image: radial-gradient(rgb(255, 245, 255),rgb(255, 166, 255));
     padding:40px;
     line-height:1.6rem;
     display:flex;
