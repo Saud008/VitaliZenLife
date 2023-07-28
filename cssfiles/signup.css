@@ -101,7 +101,7 @@ a:hover{
     color:#fc527e;
     margin: 10px 0;
 }
-a:visited,a:active{
+a,a:visited,a:active{
     color: #fc527e;
 }
 @media (min-width:360px) and (max-width:740px){
