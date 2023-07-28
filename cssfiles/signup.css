@@ -95,6 +95,15 @@ a:hover{
     border:none;
     color:white;
 }
+#BackBtn{
+    text-align: center;
+    font-weight: 700;
+    color:#fc527e;
+    margin: 10px 0;
+}
+a:visited,a:active{
+    color: #fc527e;
+}
 @media (min-width:360px) and (max-width:740px){
     .container{
         width:100%;
