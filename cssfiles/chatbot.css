@@ -81,3 +81,10 @@
         background-color: blueviolet;
         cursor: pointer;
     }
+    @media(max-width:740px){
+        .container {
+            
+            width: 90%;
+            
+        }
+    }
