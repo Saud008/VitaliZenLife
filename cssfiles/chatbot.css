@@ -15,6 +15,7 @@
         border-radius: 50%;
         background-color: blueviolet;
         cursor: pointer;
+        visibility: hidden;
         /* position:absolute; */
     }
 
@@ -30,7 +31,7 @@
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin: 3% 20%;
-        visibility: hidden;
+        visibility: visible;
     }
 
     .container h1 {
@@ -74,7 +75,7 @@
     }
 
     .close {
-        visibility: hidden;
+        visibility: visible;
         padding: 15px;
         border: none;
         border-radius: 50%;
