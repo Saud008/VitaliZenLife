@@ -1,4 +1,9 @@
-
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: linear-gradient(rgba(234, 17, 231, 0.178),rgba(97, 131, 255, 0.329));
+}
 /* Navigation */
 .menu{   
     cursor: pointer;
@@ -81,7 +86,7 @@ input{
     border-radius: 6px;
 }
 table button{
-    background-color:cornflowerblue;
+    background-color:rgb(51, 112, 225);
     padding: 5px 10px;
     border-radius: 5px;
     

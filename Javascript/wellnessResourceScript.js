@@ -12,8 +12,8 @@ let bmiUsCalc=document.getElementById("bmiUsCalc").classList
 
 document.getElementById("bmiUsBtn").addEventListener("click",function(){
 
-    document.getElementById("bmiMetricBtn").classList.remove("bg-cyan-500")
-    document.getElementById("bmiUsBtn").classList.add("bg-cyan-500")
+    document.getElementById("bmiMetricBtn").classList.remove("bg-[#ee6dff]")
+    document.getElementById("bmiUsBtn").classList.add("bg-[#ee6dff]")
     bmiMetricCalc.remove("block")
     bmiMetricCalc.add("hidden")
     bmiUsCalc.remove("hidden")
@@ -21,8 +21,8 @@ document.getElementById("bmiUsBtn").addEventListener("click",function(){
 })
 document.getElementById("bmiMetricBtn").addEventListener("click",function(){
 
-    document.getElementById("bmiUsBtn").classList.remove("bg-cyan-500")
-    document.getElementById("bmiMetricBtn").classList.add("bg-cyan-500")
+    document.getElementById("bmiUsBtn").classList.remove("bg-[#ee6dff]")
+    document.getElementById("bmiMetricBtn").classList.add("bg-[#ee6dff]")
     bmiUsCalc.remove("block")
     bmiUsCalc.add("hidden")
     bmiMetricCalc.add("block")
@@ -101,8 +101,8 @@ let BodyFatUsCalc=document.getElementById("BodyFatUsCalc").classList
 
 document.getElementById("usBtnBodyFat").addEventListener("click",function(){
 
-    document.getElementById("metricBtnBodyFat").classList.remove("bg-cyan-500")
-    document.getElementById("usBtnBodyFat").classList.add("bg-cyan-500")
+    document.getElementById("metricBtnBodyFat").classList.remove("bg-[#ee6dff]")
+    document.getElementById("usBtnBodyFat").classList.add("bg-[#ee6dff]")
     BodyFatmetricCalc.remove("block")
     BodyFatmetricCalc.add("hidden")
     BodyFatUsCalc.remove("hidden")
@@ -110,8 +110,8 @@ document.getElementById("usBtnBodyFat").addEventListener("click",function(){
 })
 document.getElementById("metricBtnBodyFat").addEventListener("click",function(){
 
-    document.getElementById("usBtnBodyFat").classList.remove("bg-cyan-500")
-    document.getElementById("metricBtnBodyFat").classList.add("bg-cyan-500")
+    document.getElementById("usBtnBodyFat").classList.remove("bg-[#ee6dff]")
+    document.getElementById("metricBtnBodyFat").classList.add("bg-[#ee6dff]")
     BodyFatUsCalc.remove("block")
     BodyFatUsCalc.add("hidden")
     BodyFatmetricCalc.add("block")
@@ -124,7 +124,7 @@ function metricCalculateBodyf(){
     const heightCm = parseFloat(document.getElementById("BodyFatCmHeight").value);
     const weightKg = parseFloat(document.getElementById("BodyFatKgWeight").value);
     if (isNaN(heightCm) || isNaN(weightKg)) {
-        alert("Please enter valid height and weight.");
+        document.getElementById("metricBodyFatResult").innerText = "Please enter valid numbers.";
     return;
     }
     const heightM = heightCm / 100;
@@ -152,7 +152,7 @@ function usCalculateBodyf(){
     const hInch = parseFloat(document.getElementById("BodyFatInchtH").value);
     const weightLbs= parseFloat(document.getElementById("BodyFatLbsWeight").value);
     if (isNaN(hInch) || isNaN(hFeet) || isNaN(weightLbs)) {
-        alert("Please enter valid height and weight.");
+        document.getElementById("usBodyFatResult").innerText = "Please enter valid numbers.";
     return;
     }
     const heightInInches = hFeet * 12 + hInch;

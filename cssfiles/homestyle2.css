@@ -1,6 +1,9 @@
-    *{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#heading{
+    font-family: 'Dancing Script', cursive;
+}
 .menu{
     
     cursor: pointer;
@@ -195,15 +198,44 @@
     opacity:1;
     transform:translateX(0);
 }
+.app:nth-child(2){
+    transition-delay: 200ms;
+}
+.app:nth-child(3){
+    transition-delay: 400ms;
+}
+.app:nth-child(4){
+    transition-delay: 600ms;
+}
 .popUp{
     
     opacity:0;
-    transform:translateY(30%);
+    transform:translateY(20%);
     transition: all 1s;
     transition-delay: 50ms;
+}
+
+.faq1:nth-child(1){
+    transition-delay: 200ms;
+}
+.faq1:nth-child(2){
+    transition-delay: 500ms;
 }
 .popShow{
     opacity:1;
     transform:translateY(0);
     filter:blur(0);
+}
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-25%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
 }

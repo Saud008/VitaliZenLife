@@ -109,6 +109,17 @@ h2 {
 .theory span {
     font-weight: bolder;
 }
+#backBtn{
+    position: fixed;
+    top:1rem;
+    left:1rem;
+    background-color: #3d82ea;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    color: white;
+    z-index: 100;
+}
 @media (min-width:360px) and (max-width:740px){
     .container{
         height:auto;
@@ -142,5 +153,13 @@ h2 {
         font-size:1rem;
         text-align:center;
         padding:0;
+    }
+    
+    .theory2,.theory4{
+        margin-left:3%;
+        width:70%;
+    }
+    .theory3{
+        width:70%;
     }
 }

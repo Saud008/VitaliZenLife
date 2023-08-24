@@ -6,6 +6,7 @@
     <title>Yoga</title>
     <link rel="stylesheet" href="./cssfiles/yoga.css">
     <link rel="stylesheet" href="./cssfiles/yogastyle2.css">
+    <link rel="icon" type="image/png" href="./Assets/favicon.png" sizes="32x32">
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
     
     
@@ -54,10 +55,10 @@
 
     <!-- Subnav -->
    <div class="flex flex-row text-xl sticky top-20 w-full" style="z-index:1000;"> 
-     <button class="p-2 md:p-5  bg-yellow-500 hover:bg-yellow-600"><a href="#about">About</a></button>
-     <button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600"><a href="#cure">Cures</a></button>
-     <button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600"><a href="#routine">Routines</a></button>
-     <button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600"><a href="#class">Classes</a></button>
+     <a href="#about"><button class="p-2 md:p-5  bg-yellow-500 hover:bg-yellow-600">About</button></a>
+    <a href="#cure"><button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600">Cures</button></a>
+    <a href="#routine"><button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600">Routines</button></a>
+    <a href="#class"><button class="p-2 md:p-5 bg-yellow-500 hover:bg-yellow-600">Classes</button></a>
    </div>
 
    <!-- About yoga section -->
@@ -90,7 +91,7 @@
 
  <h1 class="text-center md:text-6xl text-4xl font-bold my-10">Cure Diseases through YOGA</h1>
  <div>
-  <input type="text" class="w-[90%] md:w-[60%]" id="myInput" onkeyup="searchfunc()" placeholder="Search for diseases..." title="Type in a name">
+  <input type="text" class="w-[90%] md:w-[60%] animate-bounce" id="myInput" onkeyup="searchfunc()" placeholder="Search for diseases..." title="Type in a name">
   <div class="cureBlocks w-[90%] md:w-[60%]">
       <button type="button" class="collapsible">Diabetes</button>
       <div class="content">
@@ -250,7 +251,8 @@
       <h5 class="text-base font-normal m-2 text-slate-500">5:30-6:30 PM</h5>
     </div>
    </div>
-
+    <h4 class="text-xl font-medium m-2 text-slate-700 text-center py-8">(Send your details through Contact Us Section) - <a href="./index.html#contactUs" style="color:#e20bfe">Contact Us</a> </h4>
+  
   </div>
    
 <!-- Hero Section Ends here -->

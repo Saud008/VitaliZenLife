@@ -15,7 +15,7 @@
     position:relative;
 }
 nav{
-    height:100px;
+    height:5rem;
     background-color:#cbd5e1;
     display:flex;
     color:black;
@@ -26,6 +26,7 @@ nav{
     width:100%;
     z-index:100;
     top:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .scrolled{
     background-color: black;
@@ -56,6 +57,7 @@ nav ul{
 nav ul li{
     list-style:none;
     margin:0 25px;
+    
 }
 nav ul li a{
     color:black;
@@ -76,6 +78,10 @@ nav .menu-btn i{
     cursor:pointer;
     display:none;
 
+}
+.about li{
+    
+    line-height: 30px;
 }
 #click{
     display: none;
@@ -225,15 +231,15 @@ a{
 }
 .about p{
     padding:1% 4.2% 0% 4.2%;
-    font-size:1.2rem;
+    font-size:1.3rem;
+    line-height: 30px;
     font-weight:300;
 }
 .about ul{
     font-weight:600;
     font-size:1.6rem;
     display:block;
-    text-indent: -1em;
-    padding-left: -1em;
+    
     margin-left:-34%;
 }
 .about ul li{
@@ -253,6 +259,10 @@ a{
 .workout h1{
     color:#fc5c65;
     font-size:2.5rem;
+}
+#workout{
+    height: 5rem;
+    background-color: aliceblue;
 }
 .card1{
     display:flex;

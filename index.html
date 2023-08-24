@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./cssfiles/homestyle.css">
     <link rel="stylesheet" href="./cssfiles/homestyle2.css">
     <script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./Assets/favicon.png" sizes="32x32">
     
 </head>
 <body >
@@ -53,7 +57,7 @@
 
       <!-- hero section -->
       <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.586),rgba(64, 13, 74, 0.498)),url('./Assets/Medical-Wallpapers-HD-Free-download.jpg');" class="flex items-center justify-center w-full h-screen bg-no-repeat bg-cover bg-center bg-fixed">
-        <h1 class="text-6xl text-white text-center md:text-8xl  leading-loose md:leading-relaxed" id="heading">Welcome to VitaliZenLife</h1>
+        <h1 class="text-7xl text-white text-center md:text-10xl  leading-loose md:leading-relaxed" id="heading">Welcome to VitaliZenLife</h1>
       </div>
       
       <div class="flex flex-col md:flex-row items-center bg-orange-50">
@@ -106,9 +110,9 @@
 
       <div class="bg-orange-50 py-8">
         <div>
-            <p class="text-4xl font-mono font text-center my-10">Impact of VitaliZenLife on clients across the globe</p>
+            <p class="text-4xl font-mono font text-center my-10 popUp">Impact of VitaliZenLife on clients across the globe</p>
         </div>
-        <div class="flex justify-center items-center my-5">
+        <div class="popUp flex justify-center items-center my-5">
             <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
                 <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
             </div>
@@ -118,7 +122,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-center my-5">
+        <div class="popUp flex justify-center items-center my-5">
             <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
                 <i class="fa-solid fa-burger fa-2xl" style="color: #f40df8;"></i>
             </div>
@@ -128,9 +132,9 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-center my-5">
+        <div class="popUp flex justify-center items-center my-5">
             <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
-                <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
+                <i class="fa-solid fa-shoe-prints fa-2xl" style="color: #f90dfd;"></i>
             </div>
             <div class="data w-36 h-28 flex flex-col items-center justify-center text-left leading-10">
                 <h2 class="text-3xl">19.4B</h2>
@@ -138,9 +142,9 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-center my-5">
+        <div class="popUp flex justify-center items-center my-5">
             <div class="dataicons w-12 h-12 flex items-center justify-center mx-5"><br>
-                <i class="fa-solid fa-fire fa-2xl" style="color: #f90dfd;"></i>
+                <i class="fa-solid fa-globe fa-2xl" style="color: #f90dfd;"></i>
             </div>
             <div class="data w-36 h-28 flex flex-col items-center justify-center text-left leading-10">
                 <h2 class="text-3xl">345x</h2>
@@ -153,30 +157,38 @@
         <h1 class="text-4xl leading-loose p-2">Connect with over 50 apps</h1>
         <p class="text-base my-10 w-[80vw] mx-auto">Easily link your <span class="text-[#da0af6]">VitaliZenLife</span> account with apps that support your healthier lifestyle. It's not just about calories. It's about feeling better , looking better and living better.</p>
         <div class="flex flex-row items-center justify-center">
-            <div class="m-5">
+            <div class="m-5 hiddenEle app">
                 <i class="fa-solid fa-capsules fa-2xl" style="color: #bc0efb;"></i><br>
                 <p class="py-5">Comfy health</p>
             </div>
-            <div class="m-5">
+            <div class="m-5 hiddenEle app">
                 <i class="fa-solid fa-user-nurse fa-2xl" style="color: #d309fb;"></i><br>
                 <p class="py-5">User Nurse</p>
             </div>
-            <div class="m-5">
+            <div class="m-5 hiddenEle app">
                 <i class="fa-solid fa-star-of-life fa-2xl" style="color: #ca27e3;"></i><br>
                 <p class="py-5">Star Life</p>
             </div>
-            <div class="m-5">
+            <div class="m-5 hiddenEle app">
                 <i class="fa-solid fa-house-medical fa-2xl" style="color: #d408fd;"></i><br>
                 <p class="py-5">House Medical</p>
             </div>
         </div>
       </div>
-      
-
-
-      <div class="py-16">
-        <h1 class="popUp text-4xl text-center mb-5">Contact Us</h1>
-        <div class="popUp flex flex-col md:flex-row">
+      <div class="py-16 flex flex-col md:flex-row justify-center items-center bg-orange-50">
+        <div class="p-8"> 
+          <h1 class="text-6xl p-2 md:w-[50vw] w-[80vw] popUp faq1" style="color:#ed008e;">Questions?</h1>
+          <h2 class="text-4xl p-2 md:w-[50vw] w-[80vw] popUp faq1">Look Here</h2>
+        </div>
+        <div class="py-8">
+          <i class="fa-solid fa-2xl fa-arrow-right animate-bounce px-6" style="color:#ed008e;"></i>
+          <a href="./faq.html"><button class="text-3xl rounded-full p-4 px-8 text-white "  style="background-color: #ed008e;">FAQ's</button></a>
+        </div>
+      </div>
+        <div  id="contactUs" class="h-12"></div>
+      <div class="popUp py-16">
+        <h1 class="text-4xl text-center mb-5">Contact Us</h1>
+        <div class="flex flex-col md:flex-row">
             <div class="w-[70vw] md:w-[40vw] m-auto">
                 <img src="./Assets/contactUs.webp" alt="" class="">
             </div>
@@ -226,7 +238,7 @@
             <a href="">Blog</a>
             <a href="">Guides</a>
             <a href="">Client success stories</a>
-            <a href="./faq.html">FAQ's</a>
+            <a href="">FAQ's</a>
             <a href="">Podcasts</a>
         </div>
         <div class="section3 leading-normal md:leading-loose">
